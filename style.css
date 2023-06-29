@@ -20,6 +20,34 @@ body{
     background-position: center;
     background-size: cover;
 }
+.header-text{
+    margin-top: 20%;
+    font-size: 30px;
+}
+/* .header-text h1{
+    font-size: 60px;
+    margin-top: 20px;
+}
+.header-text h1 span{
+    color: #ff004f;
+} */
+.header-text .text-1{
+    font-size: 27px;
+}
+.header-text .text-2{
+    font-size: 75px;
+    font-weight: 700;
+    margin-left: -3px;
+}
+.header-text .text-3{
+    font-size: 40px;
+    margin: 5px 0;
+}
+.header-text .text-3 span{
+    color: #ff004f;
+    font-weight: 600;
+}
+
 .container{
     padding: 10px 5%;
 
@@ -60,18 +88,6 @@ nav ul li a::after{
 }
 nav ul li a:hover::after{
     width: 100%;
-}
-
-.header-text{
-    margin-top: 20%;
-    font-size: 30px;
-}
-.header-text h1{
-    font-size: 60px;
-    margin-top: 20px;
-}
-.header-text h1 span{
-    color: #ff004f;
 }
 
 /* ------------------About Section---------------------  */
