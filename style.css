@@ -69,6 +69,7 @@ nav ul li a:hover::after{
 .header-text h1 span{
     color: #ff004f;
 }
+
 /* ------------------About Section---------------------  */
 #about{
     padding: 80px 0;
@@ -136,10 +137,44 @@ nav ul li a:hover::after{
     display: block;
 }
 
-
-
-
-
+/* ------------------Services Section---------------------  */
+#services{
+    padding: 30px 0;
+}
+.services-list{
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(250px, 1fr));
+    grid-gap: 40px;
+    margin-top: 50px;
+}
+.services-list div{
+    background: #262626;
+    padding: 40px;
+    font-size: 13px;
+    font-weight: 300;
+    border-radius: 15px;
+    transition: background 0.5s, transform 0.5s;
+}
+.services-list div img {
+    width: 60px;
+    margin-bottom: 20px;
+}
+.services-list div h2{
+    font-size: 30px;
+    font-weight: 500;
+    margin-bottom: 15px;
+}
+.services-list div a{
+    text-decoration: none;
+    color: white;
+    font-size: 12px;
+    margin-top: 20px;
+    display: inline-block;
+}
+.services-list div:hover{
+    background: #ff004f;
+    transform: translateY(-10px);
+}
 
 
 
