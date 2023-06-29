@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Personal Portfolio Website</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+
+    <body>
+        <div id="header">
+            <div class="container">
+                <nav>
+                    <img src="images/logo.png" class="logo">
+                    <ul>
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#">About</a></li>
+                        <li><a href="#">Skills</a></li>
+                        <li><a href="#">Portfolio</a></li>
+                        <li><a href="#">Contact</a></li>
+                    </ul>
+                </nav>
+                <div class="header-text">
+                    <p>Android Developer, Data Analyst, Graphic Designer</p>
+                    <h1>Hi, I'm <span>Bhaskar Acharjee</span> </h1>
+                </div>
+            </div>
+        </div>
+<!-- ------------------About Section--------------------- -->
+        <div id="about">
+            <div class="container">
+                <div class="row">
+                    <div class="about-col-1">
+                        <img src="images/me_user.jpg">
+                    </div>
+                    <div class="about-col-2">
+                        <h1 class="sub-title">About Me</h1>
+                        <p>I am a highly motivated and diligent individual pursuing a Bachelor of Technology degree in Electronics and Communication at Jalpaiguri Government Engineering College. With a strong academic record and proficiency in programming languages like Java, Python, C, and C++, I have developed Android applications and also gained expertise in data visualization. Additionally, I actively contribute to the Training and Placement Cell as a role of Placement Coordinator.
+                        <br> With my strong educational background, technical skills, and leadership experiences, I am well-prepared to take on challenges and contribute effectively to any professional setting relevant with my work profile.</p>
+
+                        <div class="tab-titles">
+                            <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                            <p class="tab-links" onclick="opentab('experience')">Experience</p>
+                            <p class="tab-links" onclick="opentab('education')">Education</p>
+                        </div>
+                        <div class="tab-contents active-tab" id="skills">
+                            <ul>
+                                <li><span>Android Development</span><br>Building Android Apps</li>
+                                <li><span>Data Analytics</span><br>Analysing Data</li>
+                                <li><span>Graphic Design</span><br>Designing interfaces</li>
+                            </ul>
+                        </div>
+                        <div class="tab-contents" id="experience">
+                            <ul>
+                                <li><span>Mar 2023 - Present</span><br>Placement CoordinatorPlacement Coordinator at
+                                    Training and Placement Cell, JGEC</li>
+                                <li><span>Dec 2022 - Present</span><br>CashierCashier at
+                                    Center For Innovation, JGEC</li>
+                            </ul>
+                        </div>
+                        <div class="tab-contents" id="education">
+                            <ul>
+                                <li><span>B.Tech ECE</span><br>
+                                    Jalpaiguri Government Engineering College
+                                    <br>Bachelor of Technology - BTech, Electronics and Communications Engineering
+                                    <br>2020 - 2024
+                                    <br>Grade: 8.85 SGPA</li>
+                                <li><span>Higher Secondary</span><br>
+                                    Purba Barasat Adarsha Bidyapeeth
+                                    <br>Higher Secondary Education, Science
+                                    <br>2018 - 2019
+                                    <br>Grade: A+ (88.40%)</li>
+                                <li><span>Secondary</span><br>
+                                    Purba Barasat Adarsha Bidyapeeth
+                                    <br>Secondary Education, General
+                                    <br>2018 - 2019
+                                    <br>Grade: AA (91.57%)</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+<script>
+
+    var tablinks = document.getElementsByClassName("tab-links");
+    var tabcontents = document.getElementsByClassName("tab-contents");
+
+    function opentab(tabname){
+        for(tablink of tablinks){
+            tablink.classList.remove("active-link");
+        }
+        for(tabcontent of tabcontents){
+            tabcontent.classList.remove("active-tab");
+        }
+        event.currentTarget.classList.add("active-link");
+        document.getElementById(tabname).classList.add("active-tab");
+
+    }
+
+</script>
+
+
+    </body>
+</html>
