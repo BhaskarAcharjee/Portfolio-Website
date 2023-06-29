@@ -14,11 +14,11 @@
                 <nav>
                     <img src="images/logo.png" class="logo">
                     <ul>
-                        <li><a href="#">Home</a></li>
-                        <li><a href="#">About</a></li>
-                        <li><a href="#">Services</a></li>
-                        <li><a href="#">Portfolio</a></li>
-                        <li><a href="#">Contact</a></li>
+                        <li><a href="#header">Home</a></li>
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#services">Services</a></li>
+                        <li><a href="#portfolio">Portfolio</a></li>
+                        <li><a href="#contact">Contact</a></li>
                     </ul>
                 </nav>
                 <div class="header-text">
@@ -88,19 +88,19 @@
         <h1 class="sub-title">My Services</h1>
         <div class="services-list">
             <div>
-                <img src="images/android-dev.png" class="icon">
+                <img src="images/android-dev.png">
                 <h2>Android Development</h2>
                 <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Vero ut accusamus excepturi, exercitationem earum corrupti minus quos distinctio nisi aliquid cupiditate obcaecati. Libero excepturi voluptates repudiandae velit quasi eligendi voluptatum.</p>
                 <a href="#">Learn more ↗</a>
             </div>
             <div>
-                <img src="images/data-analysis.png" class="icon">
+                <img src="images/data-analysis.png">
                 <h2>Data Analytics</h2>
                 <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Vero ut accusamus excepturi, exercitationem earum corrupti minus quos distinctio nisi aliquid cupiditate obcaecati. Libero excepturi voluptates repudiandae velit quasi eligendi voluptatum.</p>
                 <a href="#">Learn more ↗</a>
             </div>
             <div>
-                <img src="images/garphic-design.png" class="icon">
+                <img src="images/garphic-design.png">
                 <h2>Graphic Design</h2>
                 <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Vero ut accusamus excepturi, exercitationem earum corrupti minus quos distinctio nisi aliquid cupiditate obcaecati. Libero excepturi voluptates repudiandae velit quasi eligendi voluptatum.</p>
                 <a href="#">learn more ↗</a>
@@ -108,7 +108,69 @@
         </div>
     </div>
 </div>
-
+<!-- ------------------Portfolio Section--------------------- -->
+<div id="portfolio">
+    <div class="container">
+        <h1 class="sub-title">My Works</h1>
+        <div class="work-list">
+            <div class="work">
+                <img src="images/work-1.png">
+                <div class="layer">
+                    <h3>Notes App</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto iusto reprehenderit in dolore nemo, quos asperiores consequatur, assumenda eos ipsa, autem commodi. Voluptas et vel aliquid hic iste laborum cupiditate!</p>
+                    <a href="#">↗</a>
+                </div>
+            </div>
+            <div class="work">
+                <img src="images/work-2.png">
+                <div class="layer">
+                    <h3>Attandance App</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto iusto reprehenderit in dolore nemo, quos asperiores consequatur, assumenda eos ipsa, autem commodi. Voluptas et vel aliquid hic iste laborum cupiditate!</p>
+                    <a href="#">↗</a>
+                </div>
+            </div>
+            <div class="work">
+                <img src="images/work-3.png">
+                <div class="layer">
+                    <h3>Expense Tracker App</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto iusto reprehenderit in dolore nemo, quos asperiores consequatur, assumenda eos ipsa, autem commodi. Voluptas et vel aliquid hic iste laborum cupiditate!</p>
+                    <a href="#">↗</a>
+                </div>
+            </div>
+        </div>
+        <a href="#" class="btn">See More</a>
+    </div>
+</div>
+<!-- ------------------Contact Section--------------------- -->
+<div id="contact">
+    <div class="container">
+        <div class="row">
+            <div class="contact-left">
+                <h1 class="sub-title">Contact Me</h1>
+                <p><img src="images/telegram.png">bhaskaracharjee.world@gmail.com</p>
+                <p><img src="images/whatsapp.png">(+91)6290594650</p>
+                <div class="social-icons">
+                    <a href="#"><img src="images/linedin.png"></a>
+                    <a href="#"><img src="images/twitter.png"></a>
+                    <a href="#"><img src="images/github.png"></a>
+                    <a href="#"><img src="images/youtube.png"></a>
+                </div>
+                <a href="images/BhaskarAcharjeeResume.pdf" download class="btn btn2">Download CV</a>
+            </div>
+            <div class="contact-right">
+                <form>
+                    <input type="text" name="Name" placeholder="Your Name" required>
+                    <input type="email" name="Email" placeholder="Your Email" required>
+                    <textarea name="Message" rows="7" placeholder="Your Message"></textarea>
+                    <button type="submit" class="btn btn2">Submit</button>
+                </form>
+            </div>
+        </div>
+    </div>
+    <div class="copyright">
+        <p>Copyright ©️ Coravs. Made with ❤️ By Bhaskar Acharjee</p>
+    </div>
+</div>
 
 
 <script>
@@ -125,7 +187,6 @@
         }
         event.currentTarget.classList.add("active-link");
         document.getElementById(tabname).classList.add("active-tab");
-
     }
 
 </script>
