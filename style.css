@@ -286,6 +286,12 @@ nav ul li a:hover::after{
     background: #ff004f;
 }
 
+#msg{
+    color: #61b752;
+    margin-top: -40px;
+    display: block;
+}
+
 /* ------------------Contact Section---------------------  */
 .contact-left{
     flex-basis: 35%;
