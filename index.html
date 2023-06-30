@@ -6,6 +6,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Personal Portfolio Website</title>
         <link rel="stylesheet" href="style.css">
+        <script src="https://kit.fontawesome.com/ad859f1fb7.js" crossorigin="anonymous"></script>
     </head>
 
     <body>
@@ -13,13 +14,15 @@
             <div class="container">
                 <nav>
                     <img src="images/logo.png" class="logo">
-                    <ul>
+                    <ul  id="sidemenu">
                         <li><a href="#header">Home</a></li>
                         <li><a href="#about">About</a></li>
                         <li><a href="#services">Services</a></li>
                         <li><a href="#portfolio">Portfolio</a></li>
                         <li><a href="#contact">Contact</a></li>
+                        <i class="fa-solid fa-xmark" onclick="closemenu()"></i>
                     </ul>
+                    <i class="fa-solid fa-bars" onclick="openmenu()"></i>
                 </nav>
                 <div class="header-text">
                     <!-- <p>Android Developer, Data Analyst, Graphic Designer</p>
@@ -56,9 +59,9 @@
                         </div>
                         <div class="tab-contents" id="experience">
                             <ul>
-                                <li><span>Mar 2023 - Present</span><br>Placement CoordinatorPlacement Coordinator at
+                                <li><span>Mar 2023 - Present</span><br>Placement Coordinator at
                                     Training and Placement Cell, JGEC</li>
-                                <li><span>Dec 2022 - Present</span><br>CashierCashier at
+                                <li><span>Dec 2022 - Present</span><br>Cashier at
                                     Center For Innovation, JGEC</li>
                             </ul>
                         </div>
@@ -91,22 +94,22 @@
         <h1 class="sub-title">My Services</h1>
         <div class="services-list">
             <div>
-                <img src="images/android-dev.png">
+                <i class="fa-brands fa-android"></i>
                 <h2>Android Development</h2>
                 <p>Android development involves creating applications for devices running on the Android operating system. It encompasses designing user interfaces, coding functionality, and testing for optimal performance. Android development offers immense opportunities to create innovative and user-friendly mobile applications that cater to the diverse needs of smartphone users.</p>
-                <a href="#">Learn more ↗</a>
+                <a href="#">Learn more<i class="fa-solid fa-arrow-up-right-from-square"></i></a>
             </div>
             <div>
-                <img src="images/data-analysis.png">
+                <i class="fa-solid fa-magnifying-glass-chart"></i>
                 <h2>Data Analytics</h2>
                 <p>Data analytics is the process of examining large sets of data to uncover patterns, trends, and insights that can inform decision-making. It involves collecting, organizing, and analyzing data to extract valuable information and make data-driven decisions. Data analytics plays a crucial role in various industries, driving innovation and improving business outcomes.</p>
-                <a href="#">Learn more ↗</a>
+                <a href="#">Learn more<i class="fa-solid fa-arrow-up-right-from-square"></i></a>
             </div>
             <div>
-                <img src="images/garphic-design.png">
+                <i class="fa-solid fa-wand-magic-sparkles"></i>
                 <h2>Graphic Design</h2>
                 <p>Graphic design is the art of visual communication using typography, images, and layout. It combines creativity with problem-solving to convey messages effectively. From branding to digital marketing, graphic design plays a vital role in enhancing visual appeal and capturing attention. It encompasses various elements, such as color theory, composition, and visual hierarchy, to create impactful designs.</p>
-                <a href="#">learn more ↗</a>
+                <a href="#">learn more<i class="fa-solid fa-arrow-up-right-from-square"></i></a>
             </div>
         </div>
     </div>
@@ -121,7 +124,7 @@
                 <div class="layer">
                     <h3>Notes App</h3>
                     <p>The notes app is a versatile tool for organizing and managing digital notes. With features like categorization, search functionality, and cloud synchronization, it provides convenience and accessibility. Whether it's jotting down ideas, creating to-do lists, or capturing important information, the notes app is a handy companion for staying organized and productive.</p>
-                    <a href="#">↗</a>
+                    <a href="#"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
                 </div>
             </div>
             <div class="work">
@@ -129,7 +132,7 @@
                 <div class="layer">
                     <h3>Attandance App</h3>
                     <p>The attendance app is a convenient and efficient solution for managing student attendance. It automates the process, allowing for easy tracking and record-keeping. With features like barcode scanning and comprehensive reporting, the app simplifies attendance management, saving time and reducing errors.</p>
-                    <a href="#">↗</a>
+                    <a href="#"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
                 </div>
             </div>
             <div class="work">
@@ -137,7 +140,7 @@
                 <div class="layer">
                     <h3>Expense Tracker App</h3>
                     <p>The Expense Tracker app is a powerful tool that helps users efficiently track and manage their personal expenses. With intuitive features like expense categorization, budget management, and data visualization, it provides valuable insights into spending patterns. Stay in control of your finances and make informed decisions with this user-friendly app.</p>
-                    <a href="#">↗</a>
+                    <a href="#"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
                 </div>
             </div>
         </div>
@@ -150,13 +153,13 @@
         <div class="row">
             <div class="contact-left">
                 <h1 class="sub-title">Contact Me</h1>
-                <p><img src="images/telegram.png">bhaskaracharjee.world@gmail.com</p>
-                <p><img src="images/whatsapp.png">(+91)6290594650</p>
+                <p><i class="fa-solid fa-envelope"></i>bhaskaracharjee.world@gmail.com</p>
+                <p><i class="fa-solid fa-phone"></i>(+91) 6290594650</p>
                 <div class="social-icons">
-                    <a href="https://www.linkedin.com/in/bhaskar-acharjee/"><img src="images/linedin.png"></a>
-                    <a href="https://twitter.com/_bha_s_kar_"><img src="images/twitter.png"></a>
-                    <a href="https://github.com/BhaskarAcharjee"><img src="images/github.png"></a>
-                    <a href="https://youtube.com/@CorvasBhaskar"><img src="images/youtube.png"></a>
+                    <a href="https://www.linkedin.com/in/bhaskar-acharjee/"><i class="fa-brands fa-linkedin"></i></a>
+                    <a href="https://twitter.com/_bha_s_kar_"><i class="fa-brands fa-twitter"></i></a>
+                    <a href="https://github.com/BhaskarAcharjee"><i class="fa-brands fa-github"></i></a>
+                    <a href="https://youtube.com/@CorvasBhaskar"><i class="fa-brands fa-youtube"></i></a>
                 </div>
                 <a href="images/BhaskarAcharjeeResume.pdf" download class="btn btn2">Download CV</a>
             </div>
@@ -171,7 +174,7 @@
         </div>
     </div>
     <div class="copyright">
-        <p>Copyright ©️ Coravs. Made with ❤️ By Bhaskar Acharjee</p>
+        <p>Copyright ©️ Coravs.<br/> Made with ❤️ By Bhaskar Acharjee</p>
     </div>
 </div>
 
@@ -197,6 +200,19 @@
     //     backSpeed: 60,
     //     loop: true
     // });
+
+</script>
+
+<script>
+
+    var sidmenu = document.getElementById("sidemenu");
+
+    function openmenu(){
+        sidmenu.style.right="0";
+    }
+    function closemenu(){
+        sidmenu.style.right="-200px";
+    }
 
 </script>
 
