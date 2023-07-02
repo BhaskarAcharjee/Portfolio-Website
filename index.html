@@ -15,7 +15,7 @@
             <div class="container">
                 <nav>
                     <img src="images/logo.png" class="logo">
-                    <ul  id="sidemenu">
+                    <ul id="sidemenu">
                         <li><a href="#header">Home</a></li>
                         <li><a href="#about">About</a></li>
                         <li><a href="#services">Services</a></li>
@@ -26,11 +26,9 @@
                     <i class="fa-solid fa-bars" onclick="openmenu()"></i>
                 </nav>
                 <div class="header-text">
-                    <!-- <p>Android Developer, Data Analyst, Graphic Designer</p>
-                    <h1>Hi, I'm <span>Bhaskar Acharjee</span> </h1> -->
                     <div class="text-1">Hello, My Name is</div>
                     <div class="text-2">Bhaskar Acharjee</div>
-                    <div class="text-3">and I'm not a <span>Robot</span></div>
+                    <div class="text-3">and I'm a <span id="typing-animation"></span></div>
                 </div>
             </div>
         </div>
@@ -45,7 +43,11 @@
                         <h1 class="sub-title">About Me</h1>
                         <p>I am a highly motivated and diligent individual pursuing a Bachelor of Technology degree in Electronics and Communication at Jalpaiguri Government Engineering College. With a strong academic record and proficiency in programming languages like Java, Python, C, and C++, I have developed Android applications and also gained expertise in data visualization. Additionally, I actively contribute to the Training and Placement Cell as a role of Placement Coordinator.
                         <br> With my strong educational background, technical skills, and leadership experiences, I am well-prepared to take on challenges and contribute effectively to any professional setting relevant with my work profile.</p>
-
+                        <div class="portfolio-links">
+                            <h3>My Other Portfolios :</h3>
+                            <a href="https://www.behance.net/bhaskar-acharjee" target="_blank" rel="noopener noreferrer"><i class="fab fa-behance"></i></a>
+                            <a href="https://bhaskaracharjee.github.io/Portfolio-Website/" target="_blank" rel="noopener noreferrer"><i class="fab fa-github"></i></a>
+                        </div>
                         <div class="tab-titles">
                             <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
                             <p class="tab-links" onclick="opentab('experience')">Experience</p>
@@ -399,6 +401,31 @@
         .catch(error => console.error('Error!', error.message))
     })
   </script>
+
+<!-- -----------Typing Animation--------- -->
+<script>
+    const texts = ["Android Developer", "Data Analyst", "Graphic Designer", "Youtuber"];
+    let count = 0;
+    let index = 0;
+    let currentText = "";
+    let letter = "";
+
+    (function type() {
+        if (count === texts.length) {
+            count = 0;
+        }
+        currentText = texts[count];
+        letter = currentText.slice(0, ++index);
+
+        document.getElementById("typing-animation").textContent = letter;
+        if (letter.length === currentText.length) {
+            count++;
+            index = 0;
+        }
+
+        setTimeout(type, 250); // Adjust typing speed (in milliseconds)
+    })();
+</script>
 
 <!-- ----------end-------- -->
 

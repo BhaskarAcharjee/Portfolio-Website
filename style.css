@@ -110,6 +110,7 @@ nav ul li a:hover::after{
 .about-col-2{
     flex-basis: 60%;
     color: white;
+    text-align: justify;
 }
 
 .sub-title{
@@ -158,6 +159,19 @@ nav ul li a:hover::after{
 .tab-contents.active-tab{
     display: block;
 }
+.portfolio-links {
+    margin-top: 30px;
+}
+
+.portfolio-links a {
+    color: white;
+    font-size: 24px;
+    margin-right: 10px;
+}
+
+.portfolio-links a:hover {
+    color: #ff004f;
+}
 
 /* ------------------Services Section---------------------  */
 #services{
@@ -172,7 +186,8 @@ nav ul li a:hover::after{
 .services-list div{
     background: #262626;
     padding: 40px;
-    font-size: 13px;
+    text-align: justify;
+    font-size: 14px;
     font-weight: 300;
     border-radius: 15px;
     transition: background 0.5s, transform 0.5s;
@@ -371,6 +386,7 @@ nav ul li a:hover::after{
     display: flex;
     justify-content: center;
     align-items: center;
+    text-align: justify;
 }
 
 .overlay-text3 {
