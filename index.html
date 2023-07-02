@@ -6,6 +6,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Personal Portfolio Website</title>
         <link rel="stylesheet" href="style.css">
+        <link rel="shortcut icon" href="images/logo.png">
         <script src="https://kit.fontawesome.com/ad859f1fb7.js" crossorigin="anonymous"></script>
     </head>
 
@@ -115,10 +116,10 @@
     </div>
 </div>
 <!-- ------------------Portfolio Section--------------------- -->
-<div id="portfolio">
+<!-- <div id="portfolio">
     <div class="container">
-        <h1 class="sub-title">My Works</h1>
-        <div class="work-list">
+        <h1 class="sub-title">My Works</h1> -->
+        <!-- <div class="work-list">
             <div class="work">
                 <img src="images/work-1.png">
                 <div class="layer">
@@ -144,9 +145,148 @@
                 </div>
             </div>
         </div>
-        <a href="#" class="btn">See More</a>
+        <a href="#" class="btn">See More</a> -->
+    <!-- </div>
+</div> -->
+
+<div id="portfolio">
+    <h1 class="sub-title">My Projects</h1>
+    <div class="project-heading">
+        <!-- -----------filter--------- -->
+        <ul class="project-filter">
+            <li class="list active-filter" onclick="openfilter('all')">All</li>
+            <li class="list" onclick="openfilter('app')">Android Development</li>
+            <li class="list" onclick="openfilter('data')">Data Analytics</li>
+            <li class="list" onclick="openfilter('graphic')">Graphic Design</li>
+            <li class="list" onclick="openfilter('python')">Python Projects</li>
+        </ul>
     </div>
+
+    <!--container--------->
+    <div class="portfolio-container active-filter-selected" id="all">
+        <!--1------------>
+        <a href="https://github.com/BhaskarAcharjee/CorvasNotesApp" class="portfolio-box" data-lightbox="work">
+            <img src="images/b-1.jpg" alt="">
+            <div class="overlay">
+                <h1 class="overlay-text">Notes App</h1>
+                <p class="overlay-text2">The notes app is a versatile tool for organizing and managing digital notes. With features like categorization, search functionality, and cloud synchronization, it provides convenience and accessibility. Whether it's jotting down ideas, creating to-do lists, or capturing important information, the notes app is a handy companion for staying organized and productive.</p>
+            </div>
+        </a>
+        <!--2------------>
+        <a href="images/b-2.jpg" class="portfolio-box" data-lightbox="work">
+            <img src="images/b-2.jpg" alt="">
+            <div class="overlay">
+                <h1 class="overlay-text">Attandance App</h1>
+                <p class="overlay-text2">The attendance app is a convenient and efficient solution for managing student attendance. It automates the process, allowing for easy tracking and record-keeping. With features like barcode scanning and comprehensive reporting, the app simplifies attendance management, saving time and reducing errors.</p>
+            </div>
+        </a>
+        <!--3------------>
+        <a href="images/b-3.jpg" class="portfolio-box" data-lightbox="work">
+            <img src="images/b-3.jpg" alt="">
+            <div class="overlay">
+                <h1 class="overlay-text">Expense Tracker App</h1>
+                <p class="overlay-text2">The Expense Tracker app is a powerful tool that helps users efficiently track and manage their personal expenses. With intuitive features like expense categorization, budget management, and data visualization, it provides valuable insights into spending patterns. Stay in control of your finances and make informed decisions with this user-friendly app.</p>
+            </div>
+        </a>
+        <!--4------------>
+        <a href="images/b-4.jpg" class="portfolio-box" data-lightbox="work">
+            <img src="images/b-4.jpg" alt="">
+            <div class="overlay">
+                <h1 class="overlay-text">Pixel Craft</h1>
+                <p class="overlay-text2">PixelCraft is a image editing project built using the PIL library. With its intuitive interface and a range of features, it allows users to creatively transform their images. From applying filters like blur, grayscale, and sharpen, to using canvas effects, PixelCraft empowers users to unleash their artistic vision.</p>
+            </div>
+        </a>
+        <!--5------------>
+        <a href="images/b-5.jpg" class="portfolio-box" data-lightbox="work">
+            <img src="images/b-5.jpg" alt="">
+            <div class="overlay">
+                <span class="overlay-text">Project 5</span>
+            </div>
+        </a>
+        <!--6------------>
+        <a href="images/b-6.jpg" class="portfolio-box" data-lightbox="work">
+            <img src="images/b-6.jpg" alt="">
+            <div class="overlay">
+                <span class="overlay-text">Project 6</span>
+            </div>
+        </a>
+    </div>
+
+    <div class="portfolio-container" id="app">
+        <!--1------------>
+        <a href="https://github.com/BhaskarAcharjee/CorvasNotesApp" class="portfolio-box" data-lightbox="work">
+            <img src="images/b-1.jpg" alt="">
+            <div class="overlay">
+                <h1 class="overlay-text">Notes App</h1>
+                <p class="overlay-text2">The notes app is a versatile tool for organizing and managing digital notes. With features like categorization, search functionality, and cloud synchronization, it provides convenience and accessibility. Whether it's jotting down ideas, creating to-do lists, or capturing important information, the notes app is a handy companion for staying organized and productive.</p>
+            </div>
+        </a>
+        <!--2------------>
+        <a href="images/b-2.jpg" class="portfolio-box" data-lightbox="work">
+            <img src="images/b-2.jpg" alt="">
+            <div class="overlay">
+                <h1 class="overlay-text">Attandance App</h1>
+                <p class="overlay-text2">The attendance app is a convenient and efficient solution for managing student attendance. It automates the process, allowing for easy tracking and record-keeping. With features like barcode scanning and comprehensive reporting, the app simplifies attendance management, saving time and reducing errors.</p>
+            </div>
+        </a>
+        <!--3------------>
+        <a href="images/b-3.jpg" class="portfolio-box" data-lightbox="work">
+            <img src="images/b-3.jpg" alt="">
+            <div class="overlay">
+                <h1 class="overlay-text">Expense Tracker App</h1>
+                <p class="overlay-text2">The Expense Tracker app is a powerful tool that helps users efficiently track and manage their personal expenses. With intuitive features like expense categorization, budget management, and data visualization, it provides valuable insights into spending patterns. Stay in control of your finances and make informed decisions with this user-friendly app.</p>
+            </div>
+        </a>
+    </div>
+
+    <div class="portfolio-container" id="data">
+        <!--4------------>
+        <a href="images/b-4.jpg" class="portfolio-box" data-lightbox="work">
+            <img src="images/b-4.jpg" alt="">
+            <div class="overlay">
+                <span class="overlay-text">Data Analytics Project</span>
+            </div>
+        </a>
+        <!--2------------>
+        <a href="images/b-2.jpg" class="portfolio-box" data-lightbox="work">
+            <img src="images/b-2.jpg" alt="">
+            <div class="overlay">
+                <span class="overlay-text">Data Analytics Project 2</span>
+            </div>
+        </a>
+        <!--3------------>
+        <a href="images/b-3.jpg" class="portfolio-box" data-lightbox="work">
+            <img src="images/b-3.jpg" alt="">
+            <div class="overlay">
+                <span class="overlay-text">Data Analytics Project 3</span>
+            </div>
+        </a>
+    </div>
+
+    <div class="portfolio-container" id="graphic">
+        <!--5------------>
+        <a href="images/b-5.jpg" class="portfolio-box" data-lightbox="work">
+            <img src="images/b-5.jpg" alt="">
+            <div class="overlay">
+                <span class="overlay-text">Graphic Design Project</span>
+            </div>
+        </a>
+    </div>
+
+    <div class="portfolio-container" id="python">
+        <!--4------------>
+        <a href="images/b-4.jpg" class="portfolio-box" data-lightbox="work">
+            <img src="images/b-4.jpg" alt="">
+            <div class="overlay">
+                <h1 class="overlay-text">Pixel Craft</h1>
+                <p class="overlay-text2">PixelCraft is a image editing project built using the PIL library. With its intuitive interface and a range of features, it allows users to creatively transform their images. From applying filters like blur, grayscale, and sharpen, to using canvas effects, PixelCraft empowers users to unleash their artistic vision.</p>
+            </div>
+        </a>
+    </div>
+
 </div>
+
+
 <!-- ------------------Contact Section--------------------- -->
 <div id="contact">
     <div class="container">
@@ -180,6 +320,8 @@
 </div>
 
 
+<!-- ------------------Script---------------- -->
+
 <script>
 
     var tablinks = document.getElementsByClassName("tab-links");
@@ -195,15 +337,36 @@
         event.currentTarget.classList.add("active-link");
         document.getElementById(tabname).classList.add("active-tab");
     }
-    // var typed = new Typed(".typing",{
-    //     strings: ["Android Developer","Data Analyst","Graphic Designer","Youtuber"],
-    //     typeSpeed: 100,
-    //     backSpeed: 60,
-    //     loop: true
-    // });
 
 </script>
 
+<!-- -----------Portfolio filter script--------- -->
+<script>
+
+    var tabfilters = document.getElementsByClassName("list");
+    var tabfiltercontents = document.getElementsByClassName("portfolio-container");
+
+    function openfilter(tabfilter) {
+    var selectedContainer = document.getElementById(tabfilter);
+
+        if (!selectedContainer.classList.contains("active-filter-selected")) {
+            // Filter is not active, toggle it on
+                for (var i = 0; i < tabfilters.length; i++) {
+                tabfilters[i].classList.remove("active-filter");
+                }
+                for (var j = 0; j < tabfiltercontents.length; j++) {
+                tabfiltercontents[j].classList.remove("active-filter-selected");
+                tabfiltercontents[j].style.display = "none";
+                }
+                event.currentTarget.classList.add("active-filter");
+                selectedContainer.classList.add("active-filter-selected");
+                selectedContainer.style.display = "flex";
+        }
+    }
+
+</script>
+
+<!-- -----------Contact Me Form Script--------- -->
 <script>
 
     var sidmenu = document.getElementById("sidemenu");
@@ -234,6 +397,8 @@
         .catch(error => console.error('Error!', error.message))
     })
   </script>
+
+<!-- ----------end-------- -->
 
 </body>
 </html>
