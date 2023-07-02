@@ -107,6 +107,7 @@ nav ul li a:hover::after{
     width: 100%;
     border-radius: 15px;
 }
+
 .about-col-2{
     flex-basis: 60%;
     color: white;
@@ -155,23 +156,109 @@ nav ul li a:hover::after{
 .tab-contents ul li span{
     color: #ff004f;
     font-size: 14px;
+    font-weight: 600;
 }
 .tab-contents.active-tab{
     display: block;
 }
+
 .portfolio-links {
     margin-top: 30px;
 }
-
 .portfolio-links a {
     color: white;
     font-size: 24px;
     margin-right: 10px;
 }
-
 .portfolio-links a:hover {
     color: #ff004f;
 }
+
+.skill-bars {
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px;
+}
+.skill-bar {
+    margin-bottom: 10px;
+}
+  
+.skill-name {
+    color: white;
+    margin-bottom: 5px;
+}
+  
+.skill-progress {
+    height: 10px;
+    background-color: #ababab;
+}
+  
+.html {
+    width: 90%;
+    background-color: #ff004f;
+} 
+.css {
+    width: 85%;
+    background-color: #ff004f;
+} 
+.java {
+    width: 80%;
+    background-color: #ff004f;
+}  
+.python {
+    width: 75%;
+    background-color: #ff004f;
+}
+.cpp {
+    width: 90%;
+    background-color: #ff004f;
+} 
+.sql {
+    width: 85%;
+    background-color: #ff004f;
+}
+
+.comm {
+    width: 80%;
+    background-color: #ff004f;
+} 
+.prob {
+    width: 90%;
+    background-color: #ff004f;
+} 
+.team {
+    width: 95%;
+    background-color: #ff004f;
+} 
+.time {
+    width: 90%;
+    background-color: #ff004f;
+} 
+.crea {
+    width: 95%;
+    background-color: #ff004f;
+}  
+.lead {
+    width: 85%;
+    background-color: #ff004f;
+}
+
+.skills-container {
+    display: flex;
+    justify-content: space-between;
+}
+  
+.skills-column {
+    flex-basis: 48%;
+}
+  
+.skills-title {
+    color: white;
+    font-size: 24px;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+  
 
 /* ------------------Services Section---------------------  */
 #services{

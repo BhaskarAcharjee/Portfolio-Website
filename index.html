@@ -1,127 +1,252 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Personal Portfolio Website</title>
-        <link rel="stylesheet" href="style.css">
-        <link rel="shortcut icon" href="images/logo.png">
-        <script src="https://kit.fontawesome.com/ad859f1fb7.js" crossorigin="anonymous"></script>
-    </head>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Personal Portfolio Website</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="shortcut icon" href="images/logo.png" />
+    <script
+      src="https://kit.fontawesome.com/ad859f1fb7.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
 
-    <body>
-        <div id="header">
-            <div class="container">
-                <nav>
-                    <img src="images/logo.png" class="logo">
-                    <ul id="sidemenu">
-                        <li><a href="#header">Home</a></li>
-                        <li><a href="#about">About</a></li>
-                        <li><a href="#services">Services</a></li>
-                        <li><a href="#portfolio">Portfolio</a></li>
-                        <li><a href="#contact">Contact</a></li>
-                        <i class="fa-solid fa-xmark" onclick="closemenu()"></i>
-                    </ul>
-                    <i class="fa-solid fa-bars" onclick="openmenu()"></i>
-                </nav>
-                <div class="header-text">
-                    <div class="text-1">Hello, My Name is</div>
-                    <div class="text-2">Bhaskar Acharjee</div>
-                    <div class="text-3">and I'm a <span id="typing-animation"></span></div>
-                </div>
-            </div>
+  <body>
+    <div id="header">
+      <div class="container">
+        <nav>
+          <img src="images/logo.png" class="logo" />
+          <ul id="sidemenu">
+            <li><a href="#header">Home</a></li>
+            <li><a href="#about" onclick="animateSkillBars()">About</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#portfolio">Portfolio</a></li>
+            <li><a href="#contact">Contact</a></li>
+            <i class="fa-solid fa-xmark" onclick="closemenu()"></i>
+          </ul>
+          <i class="fa-solid fa-bars" onclick="openmenu()"></i>
+        </nav>
+        <div class="header-text">
+          <div class="text-1">Hello, My Name is</div>
+          <div class="text-2">Bhaskar Acharjee</div>
+          <div class="text-3">
+            and I'm a <span id="typing-animation"></span>
+          </div>
         </div>
-<!-- ------------------About Section--------------------- -->
-        <div id="about">
-            <div class="container">
-                <div class="row">
-                    <div class="about-col-1">
-                        <img src="images/me_user.jpg">
-                    </div>
-                    <div class="about-col-2">
-                        <h1 class="sub-title">About Me</h1>
-                        <p>I am a highly motivated and diligent individual pursuing a Bachelor of Technology degree in Electronics and Communication at Jalpaiguri Government Engineering College. With a strong academic record and proficiency in programming languages like Java, Python, C, and C++, I have developed Android applications and also gained expertise in data visualization. Additionally, I actively contribute to the Training and Placement Cell as a role of Placement Coordinator.
-                        <br> With my strong educational background, technical skills, and leadership experiences, I am well-prepared to take on challenges and contribute effectively to any professional setting relevant with my work profile.</p>
-                        <div class="portfolio-links">
-                            <h3>My Other Portfolios :</h3>
-                            <a href="https://www.behance.net/bhaskar-acharjee" target="_blank" rel="noopener noreferrer"><i class="fab fa-behance"></i></a>
-                            <a href="https://bhaskaracharjee.github.io/Portfolio-Website/" target="_blank" rel="noopener noreferrer"><i class="fab fa-github"></i></a>
-                        </div>
-                        <div class="tab-titles">
-                            <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
-                            <p class="tab-links" onclick="opentab('experience')">Experience</p>
-                            <p class="tab-links" onclick="opentab('education')">Education</p>
-                        </div>
-                        <div class="tab-contents active-tab" id="skills">
-                            <ul>
-                                <li><span>Android Development</span><br>Building Android Apps</li>
-                                <li><span>Data Analytics</span><br>Analysing Data</li>
-                                <li><span>Graphic Design</span><br>Designing interfaces</li>
-                            </ul>
-                        </div>
-                        <div class="tab-contents" id="experience">
-                            <ul>
-                                <li><span>Mar 2023 - Present</span><br>Placement Coordinator at
-                                    Training and Placement Cell, JGEC</li>
-                                <li><span>Dec 2022 - Present</span><br>Cashier at
-                                    Center For Innovation, JGEC</li>
-                            </ul>
-                        </div>
-                        <div class="tab-contents" id="education">
-                            <ul>
-                                <li><span>B.Tech ECE</span><br>
-                                    Jalpaiguri Government Engineering College
-                                    <br>Bachelor of Technology - BTech, Electronics and Communications Engineering
-                                    <br>2020 - 2024
-                                    <br>Grade: 8.85 SGPA</li>
-                                <li><span>Higher Secondary</span><br>
-                                    Purba Barasat Adarsha Bidyapeeth
-                                    <br>Higher Secondary Education, Science
-                                    <br>2018 - 2019
-                                    <br>Grade: A+ (88.40%)</li>
-                                <li><span>Secondary</span><br>
-                                    Purba Barasat Adarsha Bidyapeeth
-                                    <br>Secondary Education, General
-                                    <br>2018 - 2019
-                                    <br>Grade: AA (91.57%)</li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
+      </div>
+    </div>
+    <!-- ------------------About Section--------------------- -->
+    <div id="about">
+      <div class="container">
+        <div class="row">
+          <div class="about-col-1">
+            <img src="images/me_user.jpg" />
+          </div>
+          <div class="about-col-2">
+            <h1 class="sub-title">About Me</h1>
+            <p>
+              I am a highly motivated and diligent individual pursuing a
+              Bachelor of Technology degree in
+              <b>Electronics and Communication</b> at
+              <b>Jalpaiguri Government Engineering College</b>. With a strong
+              academic record and proficiency in programming languages like
+              Java, Python, C, and C++, I have developed Android applications
+              and also gained expertise in data visualization. Additionally, I
+              actively contribute to the Training and Placement Cell as a role
+              of Placement Coordinator. <br />
+              With my strong educational background, technical skills, and
+              leadership experiences, I am well-prepared to take on challenges
+              and contribute effectively to any professional setting relevant
+              with my work profile.
+            </p>
+            <div class="portfolio-links">
+              <h3>My Other Portfolios :</h3>
+              <a
+                href="https://www.behance.net/bhaskar-acharjee"
+                target="_blank"
+                rel="noopener noreferrer"
+                ><i class="fa-brands fa-behance"></i
+              ></a>
+              <a
+                href="https://bhaskaracharjee.github.io/Portfolio-Website/"
+                target="_blank"
+                rel="noopener noreferrer"
+                ><i class="fa-brands fa-github"></i
+              ></a>
             </div>
+            <div class="tab-titles">
+              <p class="tab-links active-link" onclick="opentab('skills') ; animateSkillBars()">
+                Skills
+              </p>
+              <p class="tab-links" onclick="opentab('experience')">
+                Experience
+              </p>
+              <p class="tab-links" onclick="opentab('education')">Education</p>
+            </div>
+            <div class="tab-contents active-tab" id="skills">
+              <div class="skills-container">
+                <div class="skills-column">
+                  <h2 class="skills-title">Technical Skills</h2>
+                  <div class="skill-bars">
+                    <div class="skill-bar">
+                      <div class="skill-name">HTML</div>
+                      <div class="skill-progress html"></div>
+                    </div>
+                    <div class="skill-bar">
+                      <div class="skill-name">CSS</div>
+                      <div class="skill-progress css"></div>
+                    </div>
+                    <div class="skill-bar">
+                      <div class="skill-name">Java</div>
+                      <div class="skill-progress java"></div>
+                    </div>
+                    <div class="skill-bar">
+                      <div class="skill-name">Python</div>
+                      <div class="skill-progress python"></div>
+                    </div>
+                    <div class="skill-bar">
+                      <div class="skill-name">C++</div>
+                      <div class="skill-progress cpp"></div>
+                    </div>
+                    <div class="skill-bar">
+                      <div class="skill-name">SQL</div>
+                      <div class="skill-progress sql"></div>
+                    </div>
+                  </div>
+                </div>
+                <div class="skills-column">
+                  <h2 class="skills-title">Soft Skills</h2>
+                  <div class="skill-bars">
+                    <div class="skill-bar">
+                      <div class="skill-name">Communication</div>
+                      <div class="skill-progress comm"></div>
+                    </div>
+                    <div class="skill-bar">
+                      <div class="skill-name">Team Work & Adaptability</div>
+                      <div class="skill-progress team"></div>
+                    </div>
+                    <div class="skill-bar">
+                      <div class="skill-name">Problem Solving</div>
+                      <div class="skill-progress prob"></div>
+                    </div>
+                    <div class="skill-bar">
+                      <div class="skill-name">Creativity</div>
+                      <div class="skill-progress crea"></div>
+                    </div>
+                    <div class="skill-bar">
+                      <div class="skill-name">Time Management</div>
+                      <div class="skill-progress time"></div>
+                    </div>
+                    <div class="skill-bar">
+                      <div class="skill-name">Leadership</div>
+                      <div class="skill-progress lead"></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="tab-contents" id="experience">
+              <ul>
+                <li>
+                  <span>Placement Coordinator</span>
+                  <br/>Training and Placement Cell, JGEC
+                  <br/>Mar 2023 - Present
+                </li>
+                <li>
+                  <span>Cashier</span>
+                  <br/>Center For Innovation, JGEC
+                  <br/>Dec 2022 - Present
+                </li>
+              </ul>
+            </div>
+            <div class="tab-contents" id="education">
+              <ul>
+                <li>
+                  <span>B.Tech ECE</span><br />
+                  Jalpaiguri Government Engineering College
+                  <br />Bachelor of Technology - BTech, Electronics and
+                  Communications Engineering <br />2020 - 2024 <br />Grade: 8.85
+                  SGPA
+                </li>
+                <li>
+                  <span>Higher Secondary</span><br />
+                  Purba Barasat Adarsha Bidyapeeth
+                  <br />Higher Secondary Education, Science <br />2018 - 2019
+                  <br />Grade: A+ (88.40%)
+                </li>
+                <li>
+                  <span>Secondary</span><br />
+                  Purba Barasat Adarsha Bidyapeeth
+                  <br />Secondary Education, General <br />2018 - 2019
+                  <br />Grade: AA (91.57%)
+                </li>
+              </ul>
+            </div>
+          </div>
         </div>
-<!-- ------------------Services Section--------------------- -->
-<div id="services">
-    <div class="container">
+      </div>
+    </div>
+    <!-- ------------------Services Section--------------------- -->
+    <div id="services">
+      <div class="container">
         <h1 class="sub-title">My Services</h1>
         <div class="services-list">
-            <div>
-                <i class="fa-brands fa-android"></i>
-                <h2>Android Development</h2>
-                <p>Android development involves creating applications for devices running on the Android operating system. It encompasses designing user interfaces, coding functionality, and testing for optimal performance. Android development offers immense opportunities to create innovative and user-friendly mobile applications that cater to the diverse needs of smartphone users.</p>
-                <a href="#">Learn more<i class="fa-solid fa-arrow-up-right-from-square"></i></a>
-            </div>
-            <div>
-                <i class="fa-solid fa-magnifying-glass-chart"></i>
-                <h2>Data Analytics</h2>
-                <p>Data analytics is the process of examining large sets of data to uncover patterns, trends, and insights that can inform decision-making. It involves collecting, organizing, and analyzing data to extract valuable information and make data-driven decisions. Data analytics plays a crucial role in various industries, driving innovation and improving business outcomes.</p>
-                <a href="#">Learn more<i class="fa-solid fa-arrow-up-right-from-square"></i></a>
-            </div>
-            <div>
-                <i class="fa-solid fa-wand-magic-sparkles"></i>
-                <h2>Graphic Design</h2>
-                <p>Graphic design is the art of visual communication using typography, images, and layout. It combines creativity with problem-solving to convey messages effectively. From branding to digital marketing, graphic design plays a vital role in enhancing visual appeal and capturing attention. It encompasses various elements, such as color theory, composition, and visual hierarchy, to create impactful designs.</p>
-                <a href="#">learn more<i class="fa-solid fa-arrow-up-right-from-square"></i></a>
-            </div>
+          <div>
+            <i class="fa-brands fa-android"></i>
+            <h2>Android Development</h2>
+            <p>
+              Android development involves creating applications for devices
+              running on the Android operating system. It encompasses designing
+              user interfaces, coding functionality, and testing for optimal
+              performance. Android development offers immense opportunities to
+              create innovative and user-friendly mobile applications that cater
+              to the diverse needs of smartphone users.
+            </p>
+            <a href="#"
+              >Learn more<i class="fa-solid fa-arrow-up-right-from-square"></i
+            ></a>
+          </div>
+          <div>
+            <i class="fa-solid fa-magnifying-glass-chart"></i>
+            <h2>Data Analytics</h2>
+            <p>
+              Data analytics is the process of examining large sets of data to
+              uncover patterns, trends, and insights that can inform
+              decision-making. It involves collecting, organizing, and analyzing
+              data to extract valuable information and make data-driven
+              decisions. Data analytics plays a crucial role in various
+              industries, driving innovation and improving business outcomes.
+            </p>
+            <a href="#"
+              >Learn more<i class="fa-solid fa-arrow-up-right-from-square"></i
+            ></a>
+          </div>
+          <div>
+            <i class="fa-solid fa-wand-magic-sparkles"></i>
+            <h2>Graphic Design</h2>
+            <p>
+              Graphic design is the art of visual communication using
+              typography, images, and layout. It combines creativity with
+              problem-solving to convey messages effectively. From branding to
+              digital marketing, graphic design plays a vital role in enhancing
+              visual appeal and capturing attention. It encompasses various
+              elements, such as color theory, composition, and visual hierarchy,
+              to create impactful designs.
+            </p>
+            <a href="#"
+              >learn more<i class="fa-solid fa-arrow-up-right-from-square"></i
+            ></a>
+          </div>
         </div>
+      </div>
     </div>
-</div>
-<!-- ------------------Portfolio Section--------------------- -->
-<!-- <div id="portfolio">
+    <!-- ------------------Portfolio Section--------------------- -->
+    <!-- <div id="portfolio">
     <div class="container">
         <h1 class="sub-title">My Works</h1> -->
-        <!-- <div class="work-list">
+    <!-- <div class="work-list">
             <div class="work">
                 <img src="images/work-1.png">
                 <div class="layer">
@@ -151,283 +276,404 @@
     <!-- </div>
 </div> -->
 
-<div id="portfolio">
-    <h1 class="sub-title">My Projects</h1>
-    <div class="project-heading">
+    <div id="portfolio">
+      <h1 class="sub-title">My Projects</h1>
+      <div class="project-heading">
         <!-- -----------filter--------- -->
         <ul class="project-filter">
-            <li class="list active-filter" onclick="openfilter('all')">All</li>
-            <li class="list" onclick="openfilter('app')">Android Development</li>
-            <li class="list" onclick="openfilter('data')">Data Analytics</li>
-            <li class="list" onclick="openfilter('graphic')">Graphic Design</li>
-            <li class="list" onclick="openfilter('python')">Python Projects</li>
+          <li class="list active-filter" onclick="openfilter('all')">All</li>
+          <li class="list" onclick="openfilter('app')">Android Development</li>
+          <li class="list" onclick="openfilter('data')">Data Analytics</li>
+          <li class="list" onclick="openfilter('graphic')">Graphic Design</li>
+          <li class="list" onclick="openfilter('python')">Python Projects</li>
         </ul>
-    </div>
-
-    <!--container--------->
-    <div class="portfolio-container active-filter-selected" id="all">
+      </div>
+      <!--container--------->
+      <div class="portfolio-container active-filter-selected" id="all">
         <!--1------------>
-        <a href="https://github.com/BhaskarAcharjee/CorvasNotesApp" class="portfolio-box" data-lightbox="work">
-            <img src="images/b-1.jpg" alt="">
-            <div class="overlay">
-                <h1 class="overlay-text">Notes App</h1>
-                <p class="overlay-text2">The notes app is a versatile tool for organizing and managing digital notes. With features like categorization, search functionality, and cloud synchronization, it provides convenience and accessibility. Whether it's jotting down ideas, creating to-do lists, or capturing important information, the notes app is a handy companion for staying organized and productive.</p>
-            </div>
+        <a href="https://github.com/BhaskarAcharjee/CorvasNotesApp"
+          class="portfolio-box"
+          data-lightbox="work">
+          <img src="images/b-1.jpg" alt="" />
+          <div class="overlay">
+            <h1 class="overlay-text">Notes App</h1>
+            <p class="overlay-text2">
+              The notes app is a versatile tool for organizing and managing
+              digital notes. With features like categorization, search
+              functionality, and cloud synchronization, it provides convenience
+              and accessibility. Whether it's jotting down ideas, creating to-do
+              lists, or capturing important information, the notes app is a
+              handy companion for staying organized and productive.
+            </p>
+          </div>
         </a>
         <!--2------------>
         <a href="images/b-2.jpg" class="portfolio-box" data-lightbox="work">
-            <img src="images/b-2.jpg" alt="">
-            <div class="overlay">
-                <h1 class="overlay-text">Attandance App</h1>
-                <p class="overlay-text2">The attendance app is a convenient and efficient solution for managing student attendance. It automates the process, allowing for easy tracking and record-keeping. With features like barcode scanning and comprehensive reporting, the app simplifies attendance management, saving time and reducing errors.</p>
-            </div>
+          <img src="images/b-2.jpg" alt="" />
+          <div class="overlay">
+            <h1 class="overlay-text">Attandance App</h1>
+            <p class="overlay-text2">
+              The attendance app is a convenient and efficient solution for
+              managing student attendance. It automates the process, allowing
+              for easy tracking and record-keeping. With features like barcode
+              scanning and comprehensive reporting, the app simplifies
+              attendance management, saving time and reducing errors.
+            </p>
+          </div>
         </a>
         <!--3------------>
         <a href="images/b-3.jpg" class="portfolio-box" data-lightbox="work">
-            <img src="images/b-3.jpg" alt="">
-            <div class="overlay">
-                <h1 class="overlay-text">Expense Tracker App</h1>
-                <p class="overlay-text2">The Expense Tracker app is a powerful tool that helps users efficiently track and manage their personal expenses. With intuitive features like expense categorization, budget management, and data visualization, it provides valuable insights into spending patterns. Stay in control of your finances and make informed decisions with this user-friendly app.</p>
-            </div>
+          <img src="images/b-3.jpg" alt="" />
+          <div class="overlay">
+            <h1 class="overlay-text">Expense Tracker App</h1>
+            <p class="overlay-text2">
+              The Expense Tracker app is a powerful tool that helps users
+              efficiently track and manage their personal expenses. With
+              intuitive features like expense categorization, budget management,
+              and data visualization, it provides valuable insights into
+              spending patterns. Stay in control of your finances and make
+              informed decisions with this user-friendly app.
+            </p>
+          </div>
         </a>
         <!--4------------>
-        <a href="https://github.com/BhaskarAcharjee/PixelCraft" class="portfolio-box" data-lightbox="work">
-            <img src="images/b-4.jpg" alt="">
-            <div class="overlay">
-                <h1 class="overlay-text">Pixel Craft</h1>
-                <p class="overlay-text2">PixelCraft is a image editing project built using the PIL library. With its intuitive interface and a range of features, it allows users to creatively transform their images. From applying filters like blur, grayscale, and sharpen, to using canvas effects, PixelCraft empowers users to unleash their artistic vision.</p>
-            </div>
+        <a href="https://github.com/BhaskarAcharjee/PixelCraft"
+          class="portfolio-box" data-lightbox="work" >
+          <img src="images/b-4.jpg" alt="" />
+          <div class="overlay">
+            <h1 class="overlay-text">Pixel Craft</h1>
+            <p class="overlay-text2">
+              PixelCraft is a image editing project built using the PIL library.
+              With its intuitive interface and a range of features, it allows
+              users to creatively transform their images. From applying filters
+              like blur, grayscale, and sharpen, to using canvas effects,
+              PixelCraft empowers users to unleash their artistic vision.
+            </p>
+          </div>
         </a>
         <!--5------------>
-        <a href="https://bhaskaracharjee.github.io/NRR-Calculator/" class="portfolio-box" data-lightbox="work">
-            <img src="images/b-5.jpg" alt="">
-            <div class="overlay">
-                <h1 class="overlay-text">NRR Calculator</h1>
-                <p class="overlay-text2">NRR Calculator is a web application that allows you to calculate Net Run Rate (NRR) for cricket teams. NRR is a statistical measure used in cricket to determine the average number of runs that a team scores per over compared to the average number of runs scored against them per over.</p>
-            </div>
+        <a href="https://bhaskaracharjee.github.io/NRR-Calculator/"
+          class="portfolio-box" data-lightbox="work" >
+          <img src="images/NRR.png" alt="" />
+          <div class="overlay">
+            <h1 class="overlay-text">NRR Calculator</h1>
+            <p class="overlay-text2">
+              NRR Calculator is a web application that allows you to calculate
+              Net Run Rate (NRR) for cricket teams. NRR is a statistical measure
+              used in cricket to determine the average number of runs that a
+              team scores per over compared to the average number of runs scored
+              against them per over.
+            </p>
+          </div>
         </a>
         <!--6------------>
-        <a href="https://github.com/BhaskarAcharjee/Car-Game" class="portfolio-box" data-lightbox="work">
-            <img src="images/b-6.jpg" alt="">
-            <div class="overlay">
-                <h1 class="overlay-text">Car Game</h1>
-                <p class="overlay-text2">The objective of the game is to prevent your car from crashing into opponents car. The opponents car come from opposite direction and with variable speed.</p>
-            </div>
+        <a href="images/car-game.mp4"
+          class="portfolio-box"
+          data-lightbox="work" >
+          <img src="images/Car Game.png" alt="" />
+          <div class="overlay">
+            <h1 class="overlay-text">Car Game</h1>
+            <p class="overlay-text2">
+              The objective of the game is to prevent your car from crashing
+              into opponents car. The opponents car come from opposite direction
+              and with variable speed.
+            </p>
+          </div>
         </a>
-    </div>
+      </div>
 
-    <div class="portfolio-container" id="app">
+      <div class="portfolio-container" id="app">
         <!--1------------>
-        <a href="https://github.com/BhaskarAcharjee/CorvasNotesApp" class="portfolio-box" data-lightbox="work">
-            <img src="images/b-1.jpg" alt="">
-            <div class="overlay">
-                <h1 class="overlay-text">Notes App</h1>
-                <p class="overlay-text2">The notes app is a versatile tool for organizing and managing digital notes. With features like categorization, search functionality, and cloud synchronization, it provides convenience and accessibility. Whether it's jotting down ideas, creating to-do lists, or capturing important information, the notes app is a handy companion for staying organized and productive.</p>
-            </div>
+        <a href="https://github.com/BhaskarAcharjee/CorvasNotesApp"
+          class="portfolio-box"
+          data-lightbox="work" >
+          <img src="images/b-1.jpg" alt="" />
+          <div class="overlay">
+            <h1 class="overlay-text">Notes App</h1>
+            <p class="overlay-text2">
+              The notes app is a versatile tool for organizing and managing
+              digital notes. With features like categorization, search
+              functionality, and cloud synchronization, it provides convenience
+              and accessibility. Whether it's jotting down ideas, creating to-do
+              lists, or capturing important information, the notes app is a
+              handy companion for staying organized and productive.
+            </p>
+          </div>
         </a>
         <!--2------------>
         <a href="images/b-2.jpg" class="portfolio-box" data-lightbox="work">
-            <img src="images/b-2.jpg" alt="">
-            <div class="overlay">
-                <h1 class="overlay-text">Attandance App</h1>
-                <p class="overlay-text2">The attendance app is a convenient and efficient solution for managing student attendance. It automates the process, allowing for easy tracking and record-keeping. With features like barcode scanning and comprehensive reporting, the app simplifies attendance management, saving time and reducing errors.</p>
-            </div>
+          <img src="images/b-2.jpg" alt="" />
+          <div class="overlay">
+            <h1 class="overlay-text">Attandance App</h1>
+            <p class="overlay-text2">
+              The attendance app is a convenient and efficient solution for
+              managing student attendance. It automates the process, allowing
+              for easy tracking and record-keeping. With features like barcode
+              scanning and comprehensive reporting, the app simplifies
+              attendance management, saving time and reducing errors.
+            </p>
+          </div>
         </a>
         <!--3------------>
         <a href="images/b-3.jpg" class="portfolio-box" data-lightbox="work">
-            <img src="images/b-3.jpg" alt="">
-            <div class="overlay">
-                <h1 class="overlay-text">Expense Tracker App</h1>
-                <p class="overlay-text2">The Expense Tracker app is a powerful tool that helps users efficiently track and manage their personal expenses. With intuitive features like expense categorization, budget management, and data visualization, it provides valuable insights into spending patterns. Stay in control of your finances and make informed decisions with this user-friendly app.</p>
-            </div>
+          <img src="images/b-3.jpg" alt="" />
+          <div class="overlay">
+            <h1 class="overlay-text">Expense Tracker App</h1>
+            <p class="overlay-text2">
+              The Expense Tracker app is a powerful tool that helps users
+              efficiently track and manage their personal expenses. With
+              intuitive features like expense categorization, budget management,
+              and data visualization, it provides valuable insights into
+              spending patterns. Stay in control of your finances and make
+              informed decisions with this user-friendly app.
+            </p>
+          </div>
         </a>
-    </div>
+      </div>
 
-    <div class="portfolio-container" id="data">
+      <div class="portfolio-container" id="data">
         <!--4------------>
         <a href="images/b-4.jpg" class="portfolio-box" data-lightbox="work">
-            <img src="images/b-4.jpg" alt="">
-            <div class="overlay">
-                <span class="overlay-text">Data Analytics Project</span>
-            </div>
+          <img src="images/b-4.jpg" alt="" />
+          <div class="overlay">
+            <span class="overlay-text">Data Analytics Project</span>
+          </div>
         </a>
         <!--2------------>
         <a href="images/b-2.jpg" class="portfolio-box" data-lightbox="work">
-            <img src="images/b-2.jpg" alt="">
-            <div class="overlay">
-                <span class="overlay-text">Data Analytics Project 2</span>
-            </div>
+          <img src="images/b-2.jpg" alt="" />
+          <div class="overlay">
+            <span class="overlay-text">Data Analytics Project 2</span>
+          </div>
         </a>
         <!--3------------>
         <a href="images/b-3.jpg" class="portfolio-box" data-lightbox="work">
-            <img src="images/b-3.jpg" alt="">
-            <div class="overlay">
-                <span class="overlay-text">Data Analytics Project 3</span>
-            </div>
+          <img src="images/b-3.jpg" alt="" />
+          <div class="overlay">
+            <span class="overlay-text">Data Analytics Project 3</span>
+          </div>
         </a>
-    </div>
+      </div>
 
-    <div class="portfolio-container" id="graphic">
+      <div class="portfolio-container" id="graphic">
         <!--5------------>
-        <a href="images/b-5.jpg" class="portfolio-box" data-lightbox="work">
-            <img src="images/b-5.jpg" alt="">
-            <div class="overlay">
-                <span class="overlay-text">Graphic Design Project</span>
-            </div>
+        <a href="https://www.behance.net/gallery/174268297/Poster-Design-for-College-Museum/modules/984020541" class="portfolio-box" data-lightbox="work">
+          <img src="images/Museum Poster.png" alt="" />
+          <div class="overlay">
+            <h1 class="overlay-text">Poster Design</h1>
+            <p class="overlay-text2">Poster Design for College Museum</p>
+          </div>
         </a>
-    </div>
+      </div>
 
-    <div class="portfolio-container" id="python">
+      <div class="portfolio-container" id="python">
         <!--4------------>
-        <a href="https://github.com/BhaskarAcharjee/PixelCraft" class="portfolio-box" data-lightbox="work">
-            <img src="images/b-4.jpg" alt="">
-            <div class="overlay">
-                <h1 class="overlay-text">Pixel Craft</h1>
-                <p class="overlay-text2">PixelCraft is a image editing project built using the PIL library. With its intuitive interface and a range of features, it allows users to creatively transform their images. From applying filters like blur, grayscale, and sharpen, to using canvas effects, PixelCraft empowers users to unleash their artistic vision.</p>
-            </div>
+        <a href="https://github.com/BhaskarAcharjee/PixelCraft"
+          class="portfolio-box"
+          data-lightbox="work" >
+          <img src="images/b-4.jpg" alt="" />
+          <div class="overlay">
+            <h1 class="overlay-text">Pixel Craft</h1>
+            <p class="overlay-text2">
+              PixelCraft is a image editing project built using the PIL library.
+              With its intuitive interface and a range of features, it allows
+              users to creatively transform their images. From applying filters
+              like blur, grayscale, and sharpen, to using canvas effects,
+              PixelCraft empowers users to unleash their artistic vision.
+            </p>
+          </div>
         </a>
+      </div>
     </div>
 
-</div>
-
-
-<!-- ------------------Contact Section--------------------- -->
-<div id="contact">
-    <div class="container">
+    <!-- ------------------Contact Section--------------------- -->
+    <div id="contact">
+      <div class="container">
         <div class="row">
-            <div class="contact-left">
-                <h1 class="sub-title">Contact Me</h1>
-                <p><i class="fa-solid fa-envelope"></i>bhaskaracharjee.world@gmail.com</p>
-                <p><i class="fa-solid fa-phone"></i>(+91) 6290594650</p>
-                <div class="social-icons">
-                    <a href="https://www.linkedin.com/in/bhaskar-acharjee/"><i class="fa-brands fa-linkedin"></i></a>
-                    <a href="https://twitter.com/_bha_s_kar_"><i class="fa-brands fa-twitter"></i></a>
-                    <a href="https://github.com/BhaskarAcharjee"><i class="fa-brands fa-github"></i></a>
-                    <a href="https://youtube.com/@CorvasBhaskar"><i class="fa-brands fa-youtube"></i></a>
-                </div>
-                <a href="images/BhaskarAcharjeeResume.pdf" download class="btn btn2">Download CV</a>
+          <div class="contact-left">
+            <h1 class="sub-title">Contact Me</h1>
+            <p>
+              <i class="fa-solid fa-envelope"></i
+              >bhaskaracharjee.world@gmail.com
+            </p>
+            <p><i class="fa-solid fa-phone"></i>(+91) 6290594650</p>
+            <div class="social-icons">
+              <a href="https://www.linkedin.com/in/bhaskar-acharjee/"
+                ><i class="fa-brands fa-linkedin"></i
+              ></a>
+              <a href="https://twitter.com/_bha_s_kar_"
+                ><i class="fa-brands fa-twitter"></i
+              ></a>
+              <a href="https://github.com/BhaskarAcharjee"
+                ><i class="fa-brands fa-github"></i
+              ></a>
+              <a href="https://youtube.com/@CorvasBhaskar"
+                ><i class="fa-brands fa-youtube"></i
+              ></a>
             </div>
-            <div class="contact-right">
-                <form name="submit-to-google-sheet">
-                    <input type="text" name="Name" placeholder="Your Name" required>
-                    <input type="email" name="Email" placeholder="Your Email" required>
-                    <textarea name="Message" rows="7" placeholder="Your Message"></textarea>
-                    <button type="submit" class="btn btn2">Submit</button>
-                </form>
-                <span id="msg"></span>
-            </div>
+            <a href="images/BhaskarAcharjeeResume.pdf" download class="btn btn2"
+              >Download CV</a
+            >
+          </div>
+          <div class="contact-right">
+            <form name="submit-to-google-sheet">
+              <input type="text" name="Name" placeholder="Your Name" required />
+              <input
+                type="email"
+                name="Email"
+                placeholder="Your Email"
+                required
+              />
+              <textarea
+                name="Message"
+                rows="7"
+                placeholder="Your Message"
+              ></textarea>
+              <button type="submit" class="btn btn2">Submit</button>
+            </form>
+            <span id="msg"></span>
+          </div>
         </div>
+      </div>
+      <div class="copyright">
+        <p>
+          Copyright ©️ Coravs.<br />
+          Made with ❤️ By Bhaskar Acharjee
+        </p>
+      </div>
     </div>
-    <div class="copyright">
-        <p>Copyright ©️ Coravs.<br/> Made with ❤️ By Bhaskar Acharjee</p>
-    </div>
-</div>
 
+    <!-- ------------------Script---------------- -->
 
-<!-- ------------------Script---------------- -->
+    <script>
+      var tablinks = document.getElementsByClassName("tab-links");
+      var tabcontents = document.getElementsByClassName("tab-contents");
 
-<script>
-
-    var tablinks = document.getElementsByClassName("tab-links");
-    var tabcontents = document.getElementsByClassName("tab-contents");
-
-    function opentab(tabname){
-        for(tablink of tablinks){
-            tablink.classList.remove("active-link");
+      function opentab(tabname) {
+        for (tablink of tablinks) {
+          tablink.classList.remove("active-link");
         }
-        for(tabcontent of tabcontents){
-            tabcontent.classList.remove("active-tab");
+        for (tabcontent of tabcontents) {
+          tabcontent.classList.remove("active-tab");
         }
         event.currentTarget.classList.add("active-link");
         document.getElementById(tabname).classList.add("active-tab");
-    }
+      }
+    </script>
 
-</script>
+    <!-- -----------Portfolio filter script--------- -->
+    <script>
+      var tabfilters = document.getElementsByClassName("list");
+      var tabfiltercontents = document.getElementsByClassName(
+        "portfolio-container"
+      );
 
-<!-- -----------Portfolio filter script--------- -->
-<script>
-
-    var tabfilters = document.getElementsByClassName("list");
-    var tabfiltercontents = document.getElementsByClassName("portfolio-container");
-
-    function openfilter(tabfilter) {
-    var selectedContainer = document.getElementById(tabfilter);
+      function openfilter(tabfilter) {
+        var selectedContainer = document.getElementById(tabfilter);
 
         if (!selectedContainer.classList.contains("active-filter-selected")) {
-            // Filter is not active, toggle it on
-                for (var i = 0; i < tabfilters.length; i++) {
-                tabfilters[i].classList.remove("active-filter");
-                }
-                for (var j = 0; j < tabfiltercontents.length; j++) {
-                tabfiltercontents[j].classList.remove("active-filter-selected");
-                tabfiltercontents[j].style.display = "none";
-                }
-                event.currentTarget.classList.add("active-filter");
-                selectedContainer.classList.add("active-filter-selected");
-                selectedContainer.style.display = "flex";
+          // Filter is not active, toggle it on
+          for (var i = 0; i < tabfilters.length; i++) {
+            tabfilters[i].classList.remove("active-filter");
+          }
+          for (var j = 0; j < tabfiltercontents.length; j++) {
+            tabfiltercontents[j].classList.remove("active-filter-selected");
+            tabfiltercontents[j].style.display = "none";
+          }
+          event.currentTarget.classList.add("active-filter");
+          selectedContainer.classList.add("active-filter-selected");
+          selectedContainer.style.display = "flex";
         }
-    }
+      }
+    </script>
 
-</script>
+    <!-- -----------Contact Me Form Script--------- -->
+    <script>
+      var sidmenu = document.getElementById("sidemenu");
 
-<!-- -----------Contact Me Form Script--------- -->
-<script>
+      function openmenu() {
+        sidmenu.style.right = "0";
+      }
+      function closemenu() {
+        sidmenu.style.right = "-200px";
+      }
+    </script>
 
-    var sidmenu = document.getElementById("sidemenu");
+    <script>
+      const scriptURL =
+        "https://script.google.com/macros/s/AKfycbxrdqUDIVns0po7HGyAyTslEofskNG6iec9AF109f2vGvkcfas6FDX1PmzYmumPd6SDzA/exec";
+      const form = document.forms["submit-to-google-sheet"];
+      const msg = document.getElementById("msg");
 
-    function openmenu(){
-        sidmenu.style.right="0";
-    }
-    function closemenu(){
-        sidmenu.style.right="-200px";
-    }
+      form.addEventListener("submit", (e) => {
+        e.preventDefault();
+        fetch(scriptURL, { method: "POST", body: new FormData(form) })
+          .then((response) => {
+            msg.innerHTML = "Message Sent Sucessfully!";
+            setTimeout(function () {
+              msg.innerHTML = "";
+            }, 5000);
+            form.reset();
+          })
+          .catch((error) => console.error("Error!", error.message));
+      });
+    </script>
 
-</script>
+    <!-- -----------Typing Animation--------- -->
+    <script>
+      const texts = [
+        "Android Developer",
+        "Data Analyst",
+        "Graphic Designer",
+        "Youtuber",
+      ];
+      let count = 0;
+      let index = 0;
+      let currentText = "";
+      let letter = "";
 
-<script>
-    const scriptURL = 'https://script.google.com/macros/s/AKfycbxrdqUDIVns0po7HGyAyTslEofskNG6iec9AF109f2vGvkcfas6FDX1PmzYmumPd6SDzA/exec'
-    const form = document.forms['submit-to-google-sheet']
-    const msg = document.getElementById("msg")
-  
-    form.addEventListener('submit', e => {
-      e.preventDefault()
-      fetch(scriptURL, { method: 'POST', body: new FormData(form)})
-        .then(response => {msg.innerHTML="Message Sent Sucessfully!"
-        setTimeout(function(){
-            msg.innerHTML=""
-        },5000)
-        form.reset()
-    })
-        .catch(error => console.error('Error!', error.message))
-    })
-  </script>
-
-<!-- -----------Typing Animation--------- -->
-<script>
-    const texts = ["Android Developer", "Data Analyst", "Graphic Designer", "Youtuber"];
-    let count = 0;
-    let index = 0;
-    let currentText = "";
-    let letter = "";
-
-    (function type() {
+      (function type() {
         if (count === texts.length) {
-            count = 0;
+          count = 0;
         }
         currentText = texts[count];
         letter = currentText.slice(0, ++index);
 
         document.getElementById("typing-animation").textContent = letter;
         if (letter.length === currentText.length) {
-            count++;
-            index = 0;
+          count++;
+          index = 0;
         }
 
         setTimeout(type, 250); // Adjust typing speed (in milliseconds)
-    })();
-</script>
+      })();
+    </script>
 
+    <!-- ----------Animate Skills-------- -->
+    <script>
+        function animateSkillBars() {
+          const skillBars = document.querySelectorAll('.skill-progress');
+          
+          skillBars.forEach(skillBar => {
+            const targetWidth = skillBar.clientWidth;
+            skillBar.style.width = '0';
+            
+            let width = 0;
+            let interval = setInterval(frame, 1);
+            
+            function frame() {
+              if (width >= targetWidth) {
+                clearInterval(interval);
+              } else {
+                width++;
+                skillBar.style.width = width + 'px';
+              }
+            }
+          });
+        }
+        // animateSkillBars();
+      </script>
 <!-- ----------end-------- -->
 
-</body>
+  </body>
 </html>
