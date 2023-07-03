@@ -147,7 +147,52 @@ function opentab(tabname) {
     
     type(); // Start the typing animation
     
-    
+ 
+  // --------------About Me Typing Animation----------
+  const typingText = `I am <Bhaskar Acharjee>, an aspiring <Electronics and Communication engineer> currently pursuing my <Bachelor of Technology> at <Jalpaiguri Government Engineering College>. With a strong passion for technology and design, I constantly strive to explore and enhance my skills in various domains.\nMy journey in the field of technology has equipped me with a wide range of technical skills. I am proficient in languages such as <Python>, <Java>, <C/C++>, <HTML/CSS>, and <SQL>. I have hands-on experience with developer tools like <VS Code>, <Android Studio>, <Jupyter Notebooks>, and <MATLAB>. Additionally, I have expertise in <Android app development>, <data analytics> using tools like <Power BI> and <Advanced Excel>, and <graphic design> using Canva, Figma, and Adobe software.\nBeyond technical prowess, I have actively engaged in challenging projects that have honed my problem-solving abilities and attention to detail. I have contributed to the development of PixelCraft, an image editing tool built using the PIL library, allowing users to unleash their creativity through various filters and canvas effects. I have also created Corvas Notes, an Android application for digital note-taking, and an Attendance App for efficient management of student attendance.\nDriven by a curious and analytical mindset, I have engaged in research and published a paper on the design of a wideband microstrip patch antenna for 5G networks.\nMoreover, I have actively participated in leadership roles, serving as the Placement Coordinator for the Training and Placement Cell and Finance Manager at the Center For Innovation in my college.\n\nWith a strong foundation in both technical and soft skills, I am eager to contribute my knowledge, creativity, and dedication to making a meaningful impact in the field of technology. I am open to new opportunities and collaborations that allow me to continuously learn, grow, and contribute to innovative projects.`;
+
+  const staticText = `I am a highly motivated and diligent individual pursuing a Bachelor of Technology degree in <b>Electronics and Communication</b> at <b>Jalpaiguri Government Engineering College</b>. With a strong academic record and proficiency in programming languages like Java, Python, C, and C++, I have developed Android applications and also gained expertise in data visualization. Additionally, I actively contribute to the Training and Placement Cell as a role of Placement Coordinator. <br />With my strong educational background, technical skills, and leadership experiences, I am well-prepared to take on challenges and contribute effectively to any professional setting relevant with my work profile.`;
+  
+  const aboutParagraph = document.getElementById("about-paragraph");
+  const staticParagraph = document.getElementById("static-paragraph");
+  
+  staticParagraph.style.opacity = "0"; // Set initial opacity to 0
+  let aboutIndex = 0;
+  let insideTag = false;
+  let boldText = "";
+  
+  function aboutType() {
+    if (aboutIndex < typingText.length) {
+      const nextChar = typingText.charAt(aboutIndex);
+  
+      if (nextChar === "<" && !insideTag) {
+        insideTag = true;
+        boldText = "";
+      } else if (nextChar === ">" && insideTag) {
+        insideTag = false;
+        aboutParagraph.insertAdjacentHTML("beforeend", `<strong>${boldText}</strong>`);
+      } else if (insideTag) {
+        boldText += nextChar;
+      } else {
+        if (nextChar === "\n") {
+          aboutParagraph.insertAdjacentHTML("beforeend", "<br /><br />");
+        } else {
+          aboutParagraph.insertAdjacentHTML("beforeend", nextChar);
+        }
+      }
+  
+      aboutIndex++;
+      setTimeout(aboutType, 10); // Adjust typing speed (in milliseconds)
+    } else {
+      aboutParagraph.style.display = "none"; // Hide the about-paragraph after typing animation
+      staticParagraph.innerHTML = staticText;
+      staticParagraph.style.opacity = "1"; // Set initial opacity to 0
+    }
+  }
+  
+  aboutType();
+  
+
 
     // <!-- ----------Animate Skills-------- -->
 
