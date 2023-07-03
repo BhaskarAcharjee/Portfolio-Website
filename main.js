@@ -153,46 +153,56 @@ function opentab(tabname) {
 
   const staticText = `I am a highly motivated and diligent individual pursuing a Bachelor of Technology degree in <b>Electronics and Communication</b> at <b>Jalpaiguri Government Engineering College</b>. With a strong academic record and proficiency in programming languages like Java, Python, C, and C++, I have developed Android applications and also gained expertise in data visualization. Additionally, I actively contribute to the Training and Placement Cell as a role of Placement Coordinator. <br />With my strong educational background, technical skills, and leadership experiences, I am well-prepared to take on challenges and contribute effectively to any professional setting relevant with my work profile.`;
   
-  const aboutParagraph = document.getElementById("about-paragraph");
-  const staticParagraph = document.getElementById("static-paragraph");
-  
-  staticParagraph.style.opacity = "0"; // Set initial opacity to 0
-  let aboutIndex = 0;
-  let insideTag = false;
-  let boldText = "";
-  
-  function aboutType() {
-    if (aboutIndex < typingText.length) {
-      const nextChar = typingText.charAt(aboutIndex);
-  
-      if (nextChar === "<" && !insideTag) {
-        insideTag = true;
-        boldText = "";
-      } else if (nextChar === ">" && insideTag) {
-        insideTag = false;
-        aboutParagraph.insertAdjacentHTML("beforeend", `<strong>${boldText}</strong>`);
-      } else if (insideTag) {
-        boldText += nextChar;
-      } else {
-        if (nextChar === "\n") {
-          aboutParagraph.insertAdjacentHTML("beforeend", "<br /><br />");
-        } else {
-          aboutParagraph.insertAdjacentHTML("beforeend", nextChar);
-        }
-      }
-  
-      aboutIndex++;
-      setTimeout(aboutType, 10); // Adjust typing speed (in milliseconds)
-    } else {
-      aboutParagraph.style.display = "none"; // Hide the about-paragraph after typing animation
-      staticParagraph.innerHTML = staticText;
-      staticParagraph.style.opacity = "1"; // Set initial opacity to 0
-    }
-  }
-  
-  aboutType();
-  
+    const aboutParagraph = document.getElementById("about-paragraph");
+    const staticParagraph = document.getElementById("static-paragraph");
+    const image = document.querySelector(".about-col-1 img");
 
+    let aboutIndex = 0;
+    let insideTag = false;
+    let boldText = "";
+
+    function aboutType() {
+      if (aboutIndex < typingText.length) {
+        const nextChar = typingText.charAt(aboutIndex);
+
+        if (nextChar === "<" && !insideTag) {
+          insideTag = true;
+          boldText = "";
+        } else if (nextChar === ">" && insideTag) {
+          insideTag = false;
+          aboutParagraph.insertAdjacentHTML("beforeend", `<strong>${boldText}</strong>`);
+        } else if (insideTag) {
+          boldText += nextChar;
+        } else {
+          if (nextChar === "\n") {
+            aboutParagraph.insertAdjacentHTML("beforeend", "<br /><br />");
+          } else {
+            aboutParagraph.insertAdjacentHTML("beforeend", nextChar);
+          }
+        }
+
+        aboutIndex++;
+        setTimeout(aboutType, 10); // Adjust typing speed (in milliseconds)
+      } else {
+        aboutParagraph.style.display = "none"; // Hide the about-paragraph after typing animation
+        staticParagraph.style.display = "block"; // Show the static-paragraph after typing animation completes
+      }
+    }
+
+    // Show the static-paragraph and hide the about-paragraph on page load or reload
+    aboutParagraph.style.display = "none";
+    staticParagraph.style.display = "block";
+
+    image.addEventListener("click", () => {
+      aboutParagraph.innerHTML = ""; // Clear the existing content in the about-paragraph
+      aboutParagraph.style.display = "block"; // Show the about-paragraph when image is clicked
+      staticParagraph.style.display = "none"; // Hide the static-paragraph when image is clicked
+      aboutIndex = 0; // Reset the index for typing animation
+
+      aboutType(); // Start the typing animation
+    });
+
+    
 
     // <!-- ----------Animate Skills-------- -->
 

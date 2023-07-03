@@ -117,7 +117,7 @@ nav ul li a:hover::after{
 }
 
 #static-paragraph {
-    opacity: 0;
+    opacity: 1;
     transition: opacity 3s ease;
   }
 
