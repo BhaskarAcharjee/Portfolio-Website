@@ -616,21 +616,33 @@ form .btn2{
     background: #ff004f;
 } 
 
-.copyright{
-    width: 100%;
-    text-align: center;
-    padding: 25px 0;
-    background: #262626;
-    color: white;
-    font-weight: 300;
-}
-
 #msg{
     color: #61b752;
     margin-top: -40px;
     display: block;
 } 
 
+/* -------------Copyright------------- */
+.copyright{
+    width: 100%;
+    text-align: center;
+    padding: 25px 0;
+    background: #262626;
+    color: white;
+    font-weight: 600;
+}
+
+@keyframes blink {
+    0% { opacity: 1; }
+    50% { opacity: 0; }
+    100% { opacity: 1; }
+  }
+  
+  .blink-text {
+    animation: blink 1s infinite;
+  }
+   
+  
 /* ----------------Responsiveness------------------- */
 nav .fa-solid{
     display: none;

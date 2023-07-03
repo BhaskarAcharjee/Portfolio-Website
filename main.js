@@ -232,3 +232,22 @@ function opentab(tabname) {
       }
       // animateSkillBars();
     // <!-- ----------end-------- -->
+
+    const animatedTexts = document.querySelectorAll('.animated-text');
+
+// Function to add animation class when element is in viewport
+function animateElements() {
+  animatedTexts.forEach((text) => {
+    const textPosition = text.getBoundingClientRect().top;
+    const windowHeight = window.innerHeight;
+    if (textPosition < windowHeight - 100) {
+      text.classList.add('visible');
+    }
+  });
+}
+
+// Initial animation on page load
+animateElements();
+
+// Event listener to animate elements on scroll
+window.addEventListener('scroll', animateElements);
