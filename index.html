@@ -20,7 +20,7 @@
           <img src="images/logo.png" class="logo" />
           <ul id="sidemenu">
             <li><a href="#header">Home</a></li>
-            <li><a href="#about" onclick="animateSkillBars()">About</a></li>
+            <li><a href="#about">About</a></li>
             <li><a href="#services">Services</a></li>
             <li><a href="#portfolio">Portfolio</a></li>
             <li><a href="#contact">Contact</a></li>
@@ -77,7 +77,7 @@
               ></a>
             </div>
             <div class="tab-titles">
-              <p class="tab-links active-link" onclick="opentab('skills') ; animateSkillBars()">
+              <p class="tab-links active-link" onclick="opentab('skills')">
                 Skills
               </p>
               <p class="tab-links" onclick="opentab('experience')">
@@ -86,103 +86,297 @@
               <p class="tab-links" onclick="opentab('education')">Education</p>
             </div>
             <div class="tab-contents active-tab" id="skills">
-              <div class="skills-container">
-                <div class="skills-column">
-                  <h2 class="skills-title">Technical Skills</h2>
-                  <div class="skill-bars">
-                    <div class="skill-bar">
-                      <div class="skill-name">HTML</div>
-                      <div class="skill-progress html"></div>
+              <div class="skills__container container grid">
+                <div>
+                  <!--==================== SKILL 1 ====================-->
+                  <div class="skills__content skills__open reveal">
+                    <div class="skills__header">
+                      <i class="fa-solid fa-code skills__icon"></i>
+                      <div>
+                        <h1 class="skills__title">Languages</h1>
+                        <span class="skills__subtitle"
+                          >Programming Languages I know</span
+                        >
+                      </div>
+                      <i
+                        class="fa-sharp fa-solid fa-chevron-down skills__arrow"
+                      ></i>
                     </div>
-                    <div class="skill-bar">
-                      <div class="skill-name">CSS</div>
-                      <div class="skill-progress css"></div>
+
+                    <div class="skills__list">
+                      <div class="skills__titles">
+                        <h3 class="skills__name">Python</h3>
+                      </div>
+                      <div class="skills__titles">
+                        <h3 class="skills__name">C/C++</h3>
+                      </div>
+                      <div class="skills__titles">
+                        <h3 class="skills__name">Java</h3>
+                      </div>
+                      <div class="skills__titles">
+                        <h3 class="skills__name">HTML/CSS</h3>
+                      </div>
+                      <div class="skills__titles">
+                        <h3 class="skills__name">SQL</h3>
+                      </div>
                     </div>
-                    <div class="skill-bar">
-                      <div class="skill-name">Java</div>
-                      <div class="skill-progress java"></div>
+                  </div>
+                  <!--==================== SKILL 2 ====================-->
+                  <div class="skills__content skills__close reveal">
+                    <div class="skills__header">
+                      <i class="fa-solid fa-puzzle-piece skills__icon"></i>
+
+                      <div>
+                        <h1 class="skills__title">Frameworks</h1>
+                        <span class="skills__subtitle">Frameworks I use</span>
+                      </div>
+                      <i
+                        class="fa-sharp fa-solid fa-chevron-down skills__arrow"
+                      ></i>
                     </div>
-                    <div class="skill-bar">
-                      <div class="skill-name">Python</div>
-                      <div class="skill-progress python"></div>
-                    </div>
-                    <div class="skill-bar">
-                      <div class="skill-name">C++</div>
-                      <div class="skill-progress cpp"></div>
-                    </div>
-                    <div class="skill-bar">
-                      <div class="skill-name">SQL</div>
-                      <div class="skill-progress sql"></div>
+
+                    <div class="skills__list">
+                      <div class="skills__titles">
+                        <h3 class="skills__name">Android SDK</h3>
+                      </div>
+                      <div class="skills__titles">
+                        <h3 class="skills__name">Flask</h3>
+                      </div>
                     </div>
                   </div>
                 </div>
-                <div class="skills-column">
-                  <h2 class="skills-title">Soft Skills</h2>
-                  <div class="skill-bars">
-                    <div class="skill-bar">
-                      <div class="skill-name">Communication</div>
-                      <div class="skill-progress comm"></div>
+
+                <div>
+                  <!--==================== SKILL 3 ====================-->
+                  <div class="skills__content skills__close reveal">
+                    <div class="skills__header">
+                      <i class="fa-solid fa-wrench skills__icon"></i>
+                      <div>
+                        <h1 class="skills__title">Tools</h1>
+                        <span class="skills__subtitle">Tools I work with</span>
+                      </div>
+                      <i
+                        class="fa-sharp fa-solid fa-chevron-down skills__arrow"
+                      ></i>
                     </div>
-                    <div class="skill-bar">
-                      <div class="skill-name">Team Work & Adaptability</div>
-                      <div class="skill-progress team"></div>
+
+                    <div class="skills__list">
+                      <div class="skills__titles">
+                        <h3 class="skills__name">VS Code</h3>
+                      </div>
+                      <div class="skills__titles">
+                        <h3 class="skills__name">Android Studio</h3>
+                      </div>
+                      <div class="skills__titles">
+                        <h3 class="skills__name">Jupyter Notebooks</h3>
+                      </div>
+                      <div class="skills__titles">
+                        <h3 class="skills__name">MATLAB</h3>
+                      </div>
+                      <div class="skills__titles">
+                        <h3 class="skills__name">Canva/Figma</h3>
+                      </div>
+                      <div class="skills__titles">
+                        <h3 class="skills__name">Git</h3>
+                      </div>
+                      <div class="skills__titles">
+                        <h3 class="skills__name">Github</h3>
+                      </div>
                     </div>
-                    <div class="skill-bar">
-                      <div class="skill-name">Problem Solving</div>
-                      <div class="skill-progress prob"></div>
+                  </div>
+                  <!--==================== SKILL 4 ====================-->
+                  <div class="skills__content skills__close reveal">
+                    <div class="skills__header">
+                      <i class="fa-solid fa-layer-group skills__icon"></i>
+                      <div>
+                        <h1 class="skills__title">Libraries</h1>
+                        <span class="skills__subtitle"
+                          >Libraries I am familiar with</span
+                        >
+                      </div>
+                      <i
+                        class="fa-sharp fa-solid fa-chevron-down skills__arrow"
+                      ></i>
                     </div>
-                    <div class="skill-bar">
-                      <div class="skill-name">Creativity</div>
-                      <div class="skill-progress crea"></div>
-                    </div>
-                    <div class="skill-bar">
-                      <div class="skill-name">Time Management</div>
-                      <div class="skill-progress time"></div>
-                    </div>
-                    <div class="skill-bar">
-                      <div class="skill-name">Leadership</div>
-                      <div class="skill-progress lead"></div>
+
+                    <div class="skills__list">
+                      <div class="skills__titles">
+                        <h3 class="skills__name">NumPy</h3>
+                      </div>
+                      <div class="skills__titles">
+                        <h3 class="skills__name">Matplotlib</h3>
+                      </div>
+                      <div class="skills__titles">
+                        <h3 class="skills__name">Pandas</h3>
+                      </div>
+                      <div class="skills__titles">
+                        <h3 class="skills__name">Tkinter</h3>
+                      </div>
+                      <div class="skills__titles">
+                        <h3 class="skills__name">PIL</h3>
+                      </div>
+                      <div class="skills__titles">
+                        <h3 class="skills__name">OpenCV</h3>
+                      </div>
                     </div>
                   </div>
                 </div>
               </div>
             </div>
+
             <div class="tab-contents" id="experience">
-              <ul>
-                <li>
-                  <span>Placement Coordinator</span>
-                  <br/>Training and Placement Cell, JGEC
-                  <br/>Mar 2023 - Present
-                </li>
-                <li>
-                  <span>Cashier</span>
-                  <br/>Center For Innovation, JGEC
-                  <br/>Dec 2022 - Present
-                </li>
-              </ul>
+              <!--==================== QUALIFICATION 1 ====================-->
+              <div class="qualification__data reveal">
+                <div>
+                  <h3 class="qualification__title">Placement Coordinator</h3>
+                  <span class="qualification__subtitle"
+                    >Training & Placement Cell, JGEC</span
+                  >
+                  <div class="qualification__calendar">
+                    <i class="uil uil-calendar-alt"></i>
+                    March 2023 - Present
+                  </div>
+                </div>
+
+                <div>
+                  <span class="qualification__rounder"></span>
+                  <span class="qualification__line"></span>
+                </div>
+              </div>
+
+              <!--==================== QUALIFICATION 2 ====================-->
+              <!-- <div class="qualification__data reveal">
+                <div></div>
+
+                <div>
+                  <span class="qualification__rounder"></span>
+                  <span class="qualification__line"></span>
+                </div>
+
+                <div>
+                  <h3 class="qualification__title">Instacks Intern</h3>
+                  <span class="qualification__subtitle">Cantilever Labs</span>
+                  <div class="qualification__calendar">
+                    <i class="uil uil-calendar-alt"></i>
+                    2021 - 2021
+                  </div>
+                </div>
+              </div> -->
+
+              <!--==================== QUALIFICATION 3 ====================-->
+              <!-- <div class="qualification__data reveal">
+                <div>
+                  <h3 class="qualification__title">
+                    GFG Jgec Student Chapter Vice-President
+                  </h3>
+                  <span class="qualification__subtitle">GeeksforGeeks</span>
+                  <div class="qualification__calendar">
+                    <i class="uil uil-calendar-alt"></i>
+                    2021 - Present
+                  </div>
+                </div>
+
+                <div>
+                  <span class="qualification__rounder"></span>
+                  <span class="qualification__line"></span>
+                </div>
+              </div> -->
+
+              <!--==================== QUALIFICATION 4 ====================-->
+              <div class="qualification__data reveal">
+                <div></div>
+
+                <div>
+                  <span class="qualification__rounder"></span>
+                  <!-- <span class="qualification__line"></span> -->
+                </div>
+
+                <div>
+                  <h3 class="qualification__title">Cashier</h3>
+                  <span class="qualification__subtitle"
+                    >Center for Innovations Club, JGEC</span
+                  >
+                  <div class="qualification__calendar">
+                    <i class="uil uil-calendar-alt"></i>
+                    December 2022 - Present
+                  </div>
+                </div>
+              </div>
             </div>
+
             <div class="tab-contents" id="education">
-              <ul>
-                <li>
-                  <span>B.Tech ECE</span><br />
-                  Jalpaiguri Government Engineering College
-                  <br />Bachelor of Technology - BTech, Electronics and
-                  Communications Engineering <br />2020 - 2024 <br />Grade: 8.85
-                  SGPA
-                </li>
-                <li>
-                  <span>Higher Secondary</span><br />
-                  Purba Barasat Adarsha Bidyapeeth
-                  <br />Higher Secondary Education, Science <br />2018 - 2019
-                  <br />Grade: A+ (88.40%)
-                </li>
-                <li>
-                  <span>Secondary</span><br />
-                  Purba Barasat Adarsha Bidyapeeth
-                  <br />Secondary Education, General <br />2018 - 2019
-                  <br />Grade: AA (91.57%)
-                </li>
-              </ul>
+              <!--==================== QUALIFICATION 1 ====================-->
+              <div class="qualification__data reveal">
+                <div>
+                  <h3 class="qualification__title">
+                    Electronics and Communication Engineering
+                  </h3>
+                  <span class="qualification__subtitle"
+                    >Jalpaiguri Government Engineering College</span
+                  >
+                  <div class="qualification__calendar">
+                    <i class="fa-solid fa-star"></i>
+                    8.95 CGPA
+                  </div>
+                  <div class="qualification__calendar">
+                    <i class="fa-solid fa-calendars"></i>
+                    2020 - 2024
+                  </div>
+                </div>
+
+                <div>
+                  <span class="qualification__rounder"></span>
+                  <span class="qualification__line"></span>
+                </div>
+              </div>
+
+              <!--==================== QUALIFICATION 2 ====================-->
+              <div class="qualification__data reveal">
+                <div></div>
+
+                <div>
+                  <span class="qualification__rounder"></span>
+                  <span class="qualification__line"></span>
+                </div>
+
+                <div>
+                  <h3 class="qualification__title">Higher Secondary</h3>
+                  <span class="qualification__subtitle"
+                    >Purba Barasat Adarsha Bidyapeeth</span
+                  >
+                  <div class="qualification__calendar">
+                    <i class="fa-solid fa-star"></i>
+                    88.4%
+                  </div>
+                  <div class="qualification__calendar">
+                    <i class="fa-solid fa-calendars"></i>
+                    2017 - 2019
+                  </div>
+                </div>
+              </div>
+
+              <!--==================== QUALIFICATION 3 ====================-->
+              <div class="qualification__data reveal">
+                <div>
+                  <h3 class="qualification__title">Secondary</h3>
+                  <span class="qualification__subtitle"
+                    >Purba Barasat Adarsha Bidyapeeth</span
+                  >
+                  <div class="qualification__calendar">
+                    <i class="fa-solid fa-star"></i>
+                    91.57%
+                  </div>
+                  <div class="qualification__calendar">
+                    <i class="fa-solid fa-calendars"></i>
+                    2015 - 2017
+                  </div>
+                </div>
+
+                <div>
+                  <span class="qualification__rounder"></span>
+                  <!-- <span class="qualification__line"></span> -->
+                </div>
+              </div>
             </div>
           </div>
         </div>
@@ -194,7 +388,7 @@
         <h1 class="sub-title">My Services</h1>
         <div class="services-list">
           <div>
-            <i class="fa-brands fa-android"></i>
+            <i class="fa-brands fa-android services-list-icon"></i>
             <h2>Android Development</h2>
             <p>
               Android development involves creating applications for devices
@@ -204,12 +398,12 @@
               create innovative and user-friendly mobile applications that cater
               to the diverse needs of smartphone users.
             </p>
-            <a href="#"
+            <a href="https://en.wikipedia.org/wiki/Android_software_development"
               >Learn more<i class="fa-solid fa-arrow-up-right-from-square"></i
             ></a>
           </div>
           <div>
-            <i class="fa-solid fa-magnifying-glass-chart"></i>
+            <i class="fa-solid fa-magnifying-glass-chart services-list-icon"></i>
             <h2>Data Analytics</h2>
             <p>
               Data analytics is the process of examining large sets of data to
@@ -219,12 +413,12 @@
               decisions. Data analytics plays a crucial role in various
               industries, driving innovation and improving business outcomes.
             </p>
-            <a href="#"
+            <a href="https://en.wikipedia.org/wiki/Data_analysis"
               >Learn more<i class="fa-solid fa-arrow-up-right-from-square"></i
             ></a>
           </div>
           <div>
-            <i class="fa-solid fa-wand-magic-sparkles"></i>
+            <i class="fa-solid fa-wand-magic-sparkles services-list-icon"></i>
             <h2>Graphic Design</h2>
             <p>
               Graphic design is the art of visual communication using
@@ -235,7 +429,7 @@
               elements, such as color theory, composition, and visual hierarchy,
               to create impactful designs.
             </p>
-            <a href="#"
+            <a href="https://en.wikipedia.org/wiki/Graphic_design"
               >learn more<i class="fa-solid fa-arrow-up-right-from-square"></i
             ></a>
           </div>
@@ -291,10 +485,13 @@
       <!--container--------->
       <div class="portfolio-container active-filter-selected" id="all">
         <!--1------------>
-        <a href="https://github.com/BhaskarAcharjee/CorvasNotesApp"
+        <a
+          href="https://github.com/BhaskarAcharjee/CorvasNotesApp"
           class="portfolio-box"
-          data-lightbox="work">
+          data-lightbox="work"
+        >
           <img src="images/b-1.jpg" alt="" />
+          <h2 class="project-title">Notes App</h2>
           <div class="overlay">
             <h1 class="overlay-text">Notes App</h1>
             <p class="overlay-text2">
@@ -310,6 +507,7 @@
         <!--2------------>
         <a href="images/b-2.jpg" class="portfolio-box" data-lightbox="work">
           <img src="images/b-2.jpg" alt="" />
+          <h2 class="project-title">Attandance App</h2>
           <div class="overlay">
             <h1 class="overlay-text">Attandance App</h1>
             <p class="overlay-text2">
@@ -324,6 +522,7 @@
         <!--3------------>
         <a href="images/b-3.jpg" class="portfolio-box" data-lightbox="work">
           <img src="images/b-3.jpg" alt="" />
+          <h2 class="project-title">Expense Tracker App</h2>
           <div class="overlay">
             <h1 class="overlay-text">Expense Tracker App</h1>
             <p class="overlay-text2">
@@ -337,9 +536,13 @@
           </div>
         </a>
         <!--4------------>
-        <a href="https://github.com/BhaskarAcharjee/PixelCraft"
-          class="portfolio-box" data-lightbox="work" >
+        <a
+          href="https://github.com/BhaskarAcharjee/PixelCraft"
+          class="portfolio-box"
+          data-lightbox="work"
+        >
           <img src="images/b-4.jpg" alt="" />
+          <h2 class="project-title">Pixel Craft</h2>
           <div class="overlay">
             <h1 class="overlay-text">Pixel Craft</h1>
             <p class="overlay-text2">
@@ -352,9 +555,13 @@
           </div>
         </a>
         <!--5------------>
-        <a href="https://bhaskaracharjee.github.io/NRR-Calculator/"
-          class="portfolio-box" data-lightbox="work" >
+        <a
+          href="https://bhaskaracharjee.github.io/NRR-Calculator/"
+          class="portfolio-box"
+          data-lightbox="work"
+        >
           <img src="images/NRR.png" alt="" />
+          <h2 class="project-title">NRR Calculator</h2>
           <div class="overlay">
             <h1 class="overlay-text">NRR Calculator</h1>
             <p class="overlay-text2">
@@ -367,10 +574,13 @@
           </div>
         </a>
         <!--6------------>
-        <a href="images/car-game.mp4"
+        <a
+          href="images/car-game.mp4"
           class="portfolio-box"
-          data-lightbox="work" >
+          data-lightbox="work"
+        >
           <img src="images/Car Game.png" alt="" />
+          <h2 class="project-title">Car Game</h2>
           <div class="overlay">
             <h1 class="overlay-text">Car Game</h1>
             <p class="overlay-text2">
@@ -384,10 +594,13 @@
 
       <div class="portfolio-container" id="app">
         <!--1------------>
-        <a href="https://github.com/BhaskarAcharjee/CorvasNotesApp"
+        <a
+          href="https://github.com/BhaskarAcharjee/CorvasNotesApp"
           class="portfolio-box"
-          data-lightbox="work" >
+          data-lightbox="work"
+        >
           <img src="images/b-1.jpg" alt="" />
+          <h2 class="project-title">Notes App</h2>
           <div class="overlay">
             <h1 class="overlay-text">Notes App</h1>
             <p class="overlay-text2">
@@ -403,6 +616,7 @@
         <!--2------------>
         <a href="images/b-2.jpg" class="portfolio-box" data-lightbox="work">
           <img src="images/b-2.jpg" alt="" />
+          <h2 class="project-title">Attandance App</h2>
           <div class="overlay">
             <h1 class="overlay-text">Attandance App</h1>
             <p class="overlay-text2">
@@ -417,6 +631,7 @@
         <!--3------------>
         <a href="images/b-3.jpg" class="portfolio-box" data-lightbox="work">
           <img src="images/b-3.jpg" alt="" />
+          <h2 class="project-title">Expense Tracker App</h2>
           <div class="overlay">
             <h1 class="overlay-text">Expense Tracker App</h1>
             <p class="overlay-text2">
@@ -435,6 +650,7 @@
         <!--4------------>
         <a href="images/b-4.jpg" class="portfolio-box" data-lightbox="work">
           <img src="images/b-4.jpg" alt="" />
+          <h2 class="project-title">Data Analytics Project</h2>
           <div class="overlay">
             <span class="overlay-text">Data Analytics Project</span>
           </div>
@@ -442,6 +658,7 @@
         <!--2------------>
         <a href="images/b-2.jpg" class="portfolio-box" data-lightbox="work">
           <img src="images/b-2.jpg" alt="" />
+          <h2 class="project-title">Data Analytics Project 2</h2>
           <div class="overlay">
             <span class="overlay-text">Data Analytics Project 2</span>
           </div>
@@ -449,6 +666,7 @@
         <!--3------------>
         <a href="images/b-3.jpg" class="portfolio-box" data-lightbox="work">
           <img src="images/b-3.jpg" alt="" />
+          <h2 class="project-title">Data Analytics Project 3</h2>
           <div class="overlay">
             <span class="overlay-text">Data Analytics Project 3</span>
           </div>
@@ -457,8 +675,13 @@
 
       <div class="portfolio-container" id="graphic">
         <!--5------------>
-        <a href="https://www.behance.net/gallery/174268297/Poster-Design-for-College-Museum/modules/984020541" class="portfolio-box" data-lightbox="work">
+        <a
+          href="https://www.behance.net/gallery/174268297/Poster-Design-for-College-Museum/modules/984020541"
+          class="portfolio-box"
+          data-lightbox="work"
+        >
           <img src="images/Museum Poster.png" alt="" />
+          <h2 class="project-title">Poster Design</h2>
           <div class="overlay">
             <h1 class="overlay-text">Poster Design</h1>
             <p class="overlay-text2">Poster Design for College Museum</p>
@@ -468,10 +691,13 @@
 
       <div class="portfolio-container" id="python">
         <!--4------------>
-        <a href="https://github.com/BhaskarAcharjee/PixelCraft"
+        <a
+          href="https://github.com/BhaskarAcharjee/PixelCraft"
           class="portfolio-box"
-          data-lightbox="work" >
+          data-lightbox="work"
+        >
           <img src="images/b-4.jpg" alt="" />
+          <h2 class="project-title">Pixel Craft</h2>
           <div class="overlay">
             <h1 class="overlay-text">Pixel Craft</h1>
             <p class="overlay-text2">
@@ -543,137 +769,7 @@
       </div>
     </div>
 
-    <!-- ------------------Script---------------- -->
-
-    <script>
-      var tablinks = document.getElementsByClassName("tab-links");
-      var tabcontents = document.getElementsByClassName("tab-contents");
-
-      function opentab(tabname) {
-        for (tablink of tablinks) {
-          tablink.classList.remove("active-link");
-        }
-        for (tabcontent of tabcontents) {
-          tabcontent.classList.remove("active-tab");
-        }
-        event.currentTarget.classList.add("active-link");
-        document.getElementById(tabname).classList.add("active-tab");
-      }
-    </script>
-
-    <!-- -----------Portfolio filter script--------- -->
-    <script>
-      var tabfilters = document.getElementsByClassName("list");
-      var tabfiltercontents = document.getElementsByClassName(
-        "portfolio-container"
-      );
-
-      function openfilter(tabfilter) {
-        var selectedContainer = document.getElementById(tabfilter);
-
-        if (!selectedContainer.classList.contains("active-filter-selected")) {
-          // Filter is not active, toggle it on
-          for (var i = 0; i < tabfilters.length; i++) {
-            tabfilters[i].classList.remove("active-filter");
-          }
-          for (var j = 0; j < tabfiltercontents.length; j++) {
-            tabfiltercontents[j].classList.remove("active-filter-selected");
-            tabfiltercontents[j].style.display = "none";
-          }
-          event.currentTarget.classList.add("active-filter");
-          selectedContainer.classList.add("active-filter-selected");
-          selectedContainer.style.display = "flex";
-        }
-      }
-    </script>
-
-    <!-- -----------Contact Me Form Script--------- -->
-    <script>
-      var sidmenu = document.getElementById("sidemenu");
-
-      function openmenu() {
-        sidmenu.style.right = "0";
-      }
-      function closemenu() {
-        sidmenu.style.right = "-200px";
-      }
-    </script>
-
-    <script>
-      const scriptURL =
-        "https://script.google.com/macros/s/AKfycbxrdqUDIVns0po7HGyAyTslEofskNG6iec9AF109f2vGvkcfas6FDX1PmzYmumPd6SDzA/exec";
-      const form = document.forms["submit-to-google-sheet"];
-      const msg = document.getElementById("msg");
-
-      form.addEventListener("submit", (e) => {
-        e.preventDefault();
-        fetch(scriptURL, { method: "POST", body: new FormData(form) })
-          .then((response) => {
-            msg.innerHTML = "Message Sent Sucessfully!";
-            setTimeout(function () {
-              msg.innerHTML = "";
-            }, 5000);
-            form.reset();
-          })
-          .catch((error) => console.error("Error!", error.message));
-      });
-    </script>
-
-    <!-- -----------Typing Animation--------- -->
-    <script>
-      const texts = [
-        "Android Developer",
-        "Data Analyst",
-        "Graphic Designer",
-        "Youtuber",
-      ];
-      let count = 0;
-      let index = 0;
-      let currentText = "";
-      let letter = "";
-
-      (function type() {
-        if (count === texts.length) {
-          count = 0;
-        }
-        currentText = texts[count];
-        letter = currentText.slice(0, ++index);
-
-        document.getElementById("typing-animation").textContent = letter;
-        if (letter.length === currentText.length) {
-          count++;
-          index = 0;
-        }
-
-        setTimeout(type, 250); // Adjust typing speed (in milliseconds)
-      })();
-    </script>
-
-    <!-- ----------Animate Skills-------- -->
-    <script>
-        function animateSkillBars() {
-          const skillBars = document.querySelectorAll('.skill-progress');
-          
-          skillBars.forEach(skillBar => {
-            const targetWidth = skillBar.clientWidth;
-            skillBar.style.width = '0';
-            
-            let width = 0;
-            let interval = setInterval(frame, 1);
-            
-            function frame() {
-              if (width >= targetWidth) {
-                clearInterval(interval);
-              } else {
-                width++;
-                skillBar.style.width = width + 'px';
-              }
-            }
-          });
-        }
-        // animateSkillBars();
-      </script>
-<!-- ----------end-------- -->
-
+    <!--==================== MAIN JS ====================-->
+    <script src="main.js"></script>
   </body>
 </html>
