@@ -231,23 +231,57 @@ function opentab(tabname) {
         });
       }
       // animateSkillBars();
-    // <!-- ----------end-------- -->
+
+    // <!-- ----------Copyright Animation-------- -->
 
     const animatedTexts = document.querySelectorAll('.animated-text');
 
-// Function to add animation class when element is in viewport
-function animateElements() {
-  animatedTexts.forEach((text) => {
-    const textPosition = text.getBoundingClientRect().top;
-    const windowHeight = window.innerHeight;
-    if (textPosition < windowHeight - 100) {
-      text.classList.add('visible');
+    // Function to add animation class when element is in viewport
+    function animateElements() {
+      animatedTexts.forEach((text) => {
+        const textPosition = text.getBoundingClientRect().top;
+        const windowHeight = window.innerHeight;
+        if (textPosition < windowHeight - 100) {
+          text.classList.add('visible');
+        }
+      });
     }
-  });
-}
 
-// Initial animation on page load
-animateElements();
+    // Initial animation on page load
+    animateElements();
 
-// Event listener to animate elements on scroll
-window.addEventListener('scroll', animateElements);
+    // Event listener to animate elements on scroll
+    window.addEventListener('scroll', animateElements);
+
+
+
+    // <!-- ----------See More hidden Projects-------- -->
+
+    // function showHiddenProjects() {
+    //   var hiddenProjects = document.querySelectorAll('.hidden-projects');
+    //   for (var i = 0; i < hiddenProjects.length; i++) {
+    //     hiddenProjects[i].classList.remove('hidden-projects');
+    //     // hiddenProjects[i].style.display = 'flex';
+    //   }
+    // }
+
+    function showHiddenProjects() {
+      var hiddenProjects = document.querySelectorAll('.hidden-projects');
+      var btn = document.querySelector('.btn');
+    
+      if (hiddenProjects.length > 0) {
+        for (var i = 0; i < hiddenProjects.length; i++) {
+          hiddenProjects[i].classList.remove('hidden-projects');
+        }
+        btn.textContent = 'See Less';
+      } else {
+        var allProjects = document.querySelectorAll('.portfolio-box');
+        for (var i = 6; i < allProjects.length; i++) {
+          allProjects[i].classList.add('hidden-projects');
+          allProjects[i].style.display = 'none';
+        }
+        btn.textContent = 'See More';
+      }
+    }
+
+   // <!-- ----------end-------- -->
