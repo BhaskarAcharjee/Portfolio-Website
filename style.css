@@ -479,6 +479,13 @@ nav ul li a:hover::after {
     border-radius: 20px;
 }
 
+.project-filter li.active-filter{
+  background: #f0f0f0;
+  color: #272727;
+  border-radius: 20px;
+}
+  
+
 .portfolio-container {
     display: none;
     justify-content: center;

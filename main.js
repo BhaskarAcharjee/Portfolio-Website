@@ -35,28 +35,28 @@ function opentab(tabname) {
 
 // <!-- -----------Portfolio filter script--------- -->
 
-      var tabfilters = document.getElementsByClassName("list");
-      var tabfiltercontents = document.getElementsByClassName(
-        "portfolio-container"
-      );
+      // var tabfilters = document.getElementsByClassName("list");
+      // var tabfiltercontents = document.getElementsByClassName(
+      //   "portfolio-container"
+      // );
 
-      function openfilter(tabfilter) {
-        var selectedContainer = document.getElementById(tabfilter);
+      // function openfilter(tabfilter) {
+      //   var selectedContainer = document.getElementById(tabfilter);
 
-        if (!selectedContainer.classList.contains("active-filter-selected")) {
-          // Filter is not active, toggle it on
-          for (var i = 0; i < tabfilters.length; i++) {
-            tabfilters[i].classList.remove("active-filter");
-          }
-          for (var j = 0; j < tabfiltercontents.length; j++) {
-            tabfiltercontents[j].classList.remove("active-filter-selected");
-            tabfiltercontents[j].style.display = "none";
-          }
-          event.currentTarget.classList.add("active-filter");
-          selectedContainer.classList.add("active-filter-selected");
-          selectedContainer.style.display = "flex";
-        }
-      }
+      //   if (!selectedContainer.classList.contains("active-filter-selected")) {
+      //     // Filter is not active, toggle it on
+      //     for (var i = 0; i < tabfilters.length; i++) {
+      //       tabfilters[i].classList.remove("active-filter");
+      //     }
+      //     for (var j = 0; j < tabfiltercontents.length; j++) {
+      //       tabfiltercontents[j].classList.remove("active-filter-selected");
+      //       tabfiltercontents[j].style.display = "none";
+      //     }
+      //     event.currentTarget.classList.add("active-filter");
+      //     selectedContainer.classList.add("active-filter-selected");
+      //     selectedContainer.style.display = "flex";
+      //   }
+      // }
 
 
     // <!-- -----------Contact Me Form Script--------- -->
@@ -285,3 +285,136 @@ function opentab(tabname) {
     }
 
    // <!-- ----------end-------- -->
+
+   const projects = [
+    {
+      title: 'Notes App',
+      imageUrl: 'images/b-1.jpg',
+      description: 'The notes app is a versatile tool for organizing and managing digital notes. With features like categorization, search functionality, and cloud synchronization, it provides convenience and accessibility. Whether it\'s jotting down ideas, creating to-do lists, or capturing important information, the notes app is a handy companion for staying organized and productive.',
+      category: 'app all'
+    },
+    {
+      title: 'Attendance App',
+      imageUrl: 'images/b-2.jpg',
+      description: 'The attendance app is a convenient and efficient solution for managing student attendance. It automates the process, allowing for easy tracking and record-keeping. With features like barcode scanning and comprehensive reporting, the app simplifies attendance management, saving time and reducing errors.',
+      category: 'app all'
+    },
+    {
+      title: 'Expense Tracker App',
+      imageUrl: 'images/b-3.jpg',
+      description: 'The Expense Tracker app is a powerful tool that helps users efficiently track and manage their personal expenses. With intuitive features like expense categorization, budget management, and data visualization, it provides valuable insights into spending patterns. Stay in control of your finances and make informed decisions with this user-friendly app.',
+      category: 'app'
+    },
+    {
+      title: 'Pixel Craft',
+      imageUrl: 'images/pixelcraft.png',
+      description: 'PixelCraft is an image editing project built using the PIL library. With its intuitive interface and a range of features, it allows users to creatively transform their images. From applying filters like blur, grayscale, and sharpen, to using canvas effects, PixelCraft empowers users to unleash their artistic vision.',
+      category: 'python all'
+    },
+    {
+      title: 'Sudoku Solver',
+      imageUrl: 'images/sudokusolver.png',
+      description: 'A Sudoku solver is an algorithm or program that aims to solve Sudoku puzzles. It takes an incomplete Sudoku grid as input and fills in the missing numbers according to the Sudoku rules. By using logical deductions and backtracking techniques, the solver iterates through the puzzle, making educated guesses and eliminating possibilities until a valid solution is found or all possibilities are exhausted. The Sudoku solver provides a systematic approach to solving Sudoku puzzles efficiently and accurately.',
+      category: 'python all'
+    },
+    {
+      title: 'Morse Enigma',
+      imageUrl: 'images/morseenigma.png',
+      description: 'Morse Enigma is a communication system that uses Morse code encryption to transmit messages securely. It combines the principles of the traditional Morse code with the complexity of an Enigma machine, adding an additional layer of encryption. The system employs a series of rotating cipher wheels to encode and decode messages, ensuring confidentiality and confidentiality in communication.',
+      category: 'python all'
+    },
+    {
+      title: 'AIConverse',
+      imageUrl: 'images/aiconverse.png',
+      description: 'AIConverse is an advanced chatbot platform powered by artificial intelligence. It utilizes natural language processing and machine learning techniques to understand and respond to user queries in a conversational manner. With its intelligent algorithms and customizable features, AIConverse provides a seamless and interactive chatbot experience for various applications, including customer support, virtual assistants, and information retrieval.',
+      category: 'python all'
+    },
+    {
+      title: 'HandSphere',
+      imageUrl: 'images/handsphere.png',
+      description: 'HandSphere is a unique hand gesture recognition system that combines the capabilities of hand cricket and rock-paper-scissors games. It leverages computer vision and machine learning algorithms to detect and interpret hand gestures in real-time. With HandSphere, users can enjoy interactive and immersive gaming experiences by using hand gestures as input. Whether its playing hand cricket or challenging opponents in rock-paper-scissors, HandSphere brings a new level of fun and engagement to gesture-based gaming.',
+      category: 'python all'
+    },    
+    {
+      title: 'Data Analytics Project',
+      imageUrl: 'images/b-4.jpg',
+      description: 'Data Analytics Project description goes here...',
+      category: 'data'
+    },
+    {
+      title: 'Data Analytics Project 2',
+      imageUrl: 'images/b-2.jpg',
+      description: 'Data Analytics Project 2 description goes here...',
+      category: 'data'
+    },
+    {
+      title: 'Data Analytics Project 3',
+      imageUrl: 'images/b-3.jpg',
+      description: 'Data Analytics Project 3 description goes here...',
+      category: 'data'
+    },
+    {
+      title: 'Poster Design',
+      imageUrl: 'images/Museum Poster.png',
+      description: 'Poster Design for College Museum description goes here...',
+      category: 'graphic all'
+    },
+    // Add more project here
+  ];  
+  
+  
+  function generateProjectMarkup(project) {
+    return `
+      <a href="#" class="portfolio-box" data-lightbox="work">
+        <img src="${project.imageUrl}" alt="" />
+        <h2 class="project-title">${project.title}</h2>
+        <div class="overlay">
+          <h1 class="overlay-text">${project.title}</h1>
+          <p class="overlay-text2">${project.description}</p>
+        </div>
+      </a>
+    `;
+  }
+  
+  function initializePortfolio() {
+    const portfolioContainers = document.querySelectorAll('.portfolio-container');
+  
+    projects.forEach(project => {
+      const projectMarkup = generateProjectMarkup(project);
+      const categories = project.category.split(' ');
+  
+      categories.forEach(category => {
+        const container = document.getElementById(category);
+        if (container) {
+          container.innerHTML += projectMarkup;
+        }
+      });
+    });
+  }
+
+// initialize Portfolio from Project Markup
+  initializePortfolio();
+ 
+  function openFilter(category) {
+    const portfolioContainers = document.querySelectorAll('.portfolio-container');
+    const filterItems = document.querySelectorAll('.list');
+  
+    portfolioContainers.forEach(container => {
+      if (container.id === category) {
+        container.classList.add('active-filter-selected');
+      } else {
+        container.classList.remove('active-filter-selected');
+      }
+    });
+  
+    filterItems.forEach(item => {
+      const itemCategory = item.getAttribute('data-category');
+      if (itemCategory === category) {
+        item.classList.add('active-filter');
+      } else {
+        item.classList.remove('active-filter');
+      }
+    });
+  }
+  
+  
