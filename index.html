@@ -88,6 +88,7 @@
               <p class="tab-links" onclick="opentab('education')">Education</p>
             </div>
 
+            <!-- ------------------Skills Section--------------------- -->
             <div class="tab-contents active-tab" id="skills">
               <div class="skills__container container grid">
                 <div>
@@ -513,20 +514,44 @@
       <h1 class="sub-title">My <span>Projects</span></h1>
       <div class="project-heading">
         <ul class="project-filter">
-          <li class="list active-filter" data-category="all" onclick="openFilter('all')">All</li>
-          <li class="list" data-category="app" onclick="openFilter('app')">Android Development</li>
-          <li class="list" data-category="data" onclick="openFilter('data')">Data Analytics</li>
-          <li class="list" data-category="graphic" onclick="openFilter('graphic')">Graphic Design</li>
-          <li class="list" data-category="python" onclick="openFilter('python')">Python Projects</li>
+          <li
+            class="list active-filter"
+            data-category="all"
+            onclick="openFilter('all')"
+          >
+            All
+          </li>
+          <li class="list" data-category="app" onclick="openFilter('app')">
+            Android Development
+          </li>
+          <li
+            class="list"
+            data-category="python"
+            onclick="openFilter('python')"
+          >
+            Python Projects
+          </li>
+          <li class="list" data-category="data" onclick="openFilter('data')">
+            Data Analytics
+          </li>
+          <li
+            class="list"
+            data-category="graphic"
+            onclick="openFilter('graphic')"
+          >
+            Graphic Design
+          </li>
         </ul>
       </div>
-    
-      <div class="portfolio-container active-filter-selected" id="all"></div>
+
+      <div class="portfolio-container active-filter-selected" id="all">
+        <!-- <a class="btn btn3 see-more-button">See More</a> -->
+      </div>
       <div class="portfolio-container" id="app"></div>
       <div class="portfolio-container" id="data"></div>
       <div class="portfolio-container" id="graphic"></div>
       <div class="portfolio-container" id="python"></div>
-    </div>    
+    </div>
 
     <!-- ------------------Contact Section--------------------- -->
     <div id="contact">
