@@ -153,33 +153,64 @@ function opentab(tabname) {
   document.getElementById(tabname).classList.add("active-tab");
 }
 
+/********************* Coding Profile Section **********************/
+
+// >>>>>>>>>>>>>>>>>>>>> No of problems count Animation <<<<<<<<<<<<<<<<<<<<<<<
+// Get the target count elements
+const leetcodeCountElement = document.getElementById("leetcode-count");
+const gfgCountElement = document.getElementById("gfg-count");
+
+// Set the target numbers
+const leetcodeTargetCount = 375;
+const gfgTargetCount = 175;
+
+// Function to animate the count
+function animateProblemsCount(problemelement, problemtarget) {
+  let problemcount = 0;
+  const problemduration = 2000; // Animation duration in milliseconds
+  const probleminterval = Math.ceil(problemduration / problemtarget); // Interval for each count increment
+
+  const problemcountInterval = setInterval(() => {
+    problemcount++;
+    problemelement.textContent = problemcount;
+
+    if (problemcount >= problemtarget) {
+      clearInterval(problemcountInterval);
+    }
+  }, probleminterval);
+}
+
+// Animate the counts on page load
+window.addEventListener("DOMContentLoaded", () => {
+  animateProblemsCount(leetcodeCountElement, leetcodeTargetCount);
+  animateProblemsCount(gfgCountElement, gfgTargetCount);
+});
+
+// Function to start the counting animation loop with a delay
+function ProblemsstartCountingLoop() {
+  setTimeout(() => {
+    animateProblemsCount(leetcodeCountElement, leetcodeTargetCount);
+    animateProblemsCount(gfgCountElement, gfgTargetCount);
+
+    // Call the function again after a delay
+    ProblemsstartCountingLoop();
+  }, 7000); // Delay in milliseconds (adjustable)
+}
+
+// Start the counting animation loop
+ProblemsstartCountingLoop();
+
 /*==================== Portfolio Section ====================*/
 
 // >>>>>>>>>>>>>>>>>>>>> Project Markup <<<<<<<<<<<<<<<<<<<<<<<
 const projects = [
   {
-    title: "Notes App",
-    imageUrl: "images/notesapp.png",
-    websiteUrl: "https://github.com/BhaskarAcharjee/CorvasNotesApp",
+    title: "Melody Morph",
+    imageUrl: "images/melodymorph.png",
+    websiteUrl: "https://github.com/BhaskarAcharjee/MelodyMorph",
     description:
-      "The notes app is a versatile tool for organizing and managing digital notes. With features like categorization, search functionality, and cloud synchronization, it provides convenience and accessibility. Whether it's jotting down ideas, creating to-do lists, or capturing important information, the notes app is a handy companion for staying organized and productive.",
-    category: "app all",
-  },
-  {
-    title: "Attendance App",
-    imageUrl: "images/attandenceapp.png",
-    websiteUrl: "#",
-    description:
-      "The attendance app is a convenient and efficient solution for managing student attendance. It automates the process, allowing for easy tracking and record-keeping. With features like barcode scanning and comprehensive reporting, the app simplifies attendance management, saving time and reducing errors.",
-    category: "app all",
-  },
-  {
-    title: "Expense Tracker App",
-    imageUrl: "images/expensetrackerapp.png",
-    websiteUrl: "#",
-    description:
-      "The Expense Tracker app is a powerful tool that helps users efficiently track and manage their personal expenses. With intuitive features like expense categorization, budget management, and data visualization, it provides valuable insights into spending patterns. Stay in control of your finances and make informed decisions with this user-friendly app.",
-    category: "app all",
+      "MelodyMorph is a Python Flask web application for audio analysis and melody transformation. It provides a user-friendly interface to analyze audio files, extract melodic information, and apply various transformations like transposition, rhythm modification, and harmonic generation. With MelodyMorph, users can explore and manipulate visual melodies effortlessly.",
+    category: "python webdev all",
   },
   {
     title: "Pixel Craft",
@@ -188,6 +219,14 @@ const projects = [
     description:
       "PixelCraft is an image editing project built using the PIL library. With its intuitive interface and a range of features, it allows users to creatively transform their images. From applying filters like blur, grayscale, and sharpen, to using canvas effects, PixelCraft empowers users to unleash their artistic vision.",
     category: "python all",
+  },
+  {
+    title: "Notes App",
+    imageUrl: "images/notesapp.png",
+    websiteUrl: "https://github.com/BhaskarAcharjee/CorvasNotesApp",
+    description:
+      "The notes app is a versatile tool for organizing and managing digital notes. With features like categorization, search functionality, and cloud synchronization, it provides convenience and accessibility. Whether it's jotting down ideas, creating to-do lists, or capturing important information, the notes app is a handy companion for staying organized and productive.",
+    category: "app all",
   },
   {
     title: "Sudoku Solver",
@@ -222,6 +261,22 @@ const projects = [
     category: "python all",
   },
   {
+    title: "Attendance App",
+    imageUrl: "images/attandenceapp.png",
+    websiteUrl: "#",
+    description:
+      "The attendance app is a convenient and efficient solution for managing student attendance. It automates the process, allowing for easy tracking and record-keeping. With features like barcode scanning and comprehensive reporting, the app simplifies attendance management, saving time and reducing errors.",
+    category: "app all",
+  },
+  {
+    title: "Expense Tracker App",
+    imageUrl: "images/expensetrackerapp.png",
+    websiteUrl: "#",
+    description:
+      "The Expense Tracker app is a powerful tool that helps users efficiently track and manage their personal expenses. With intuitive features like expense categorization, budget management, and data visualization, it provides valuable insights into spending patterns. Stay in control of your finances and make informed decisions with this user-friendly app.",
+    category: "app all",
+  },
+  {
     title: "Data Analytics Project",
     imageUrl: "images/b-4.jpg",
     websiteUrl: "#",
@@ -242,7 +297,7 @@ const projects = [
     websiteUrl: "https://bhaskaracharjee.github.io/NRR-Calculator/",
     description:
       "Net Run Rate (NRR) in cricket is a statistical method of analysing and compare the performance of a team usually during a multi-team tournament. The Net Run Rate plays a critical role to decide which team qualifies for the next round when two or more teams end up with the same number of points.",
-    category: "all",
+    category: "webdev all",
   },
   {
     title: "Poster Design",
@@ -311,15 +366,6 @@ function openFilter(category) {
 }
 
 // >>>>>>>>>>>>>>>>>>>>> Show hidden Projects <<<<<<<<<<<<<<<<<<<<<<<
-
-// function showHiddenProjects() {
-//   var hiddenProjects = document.querySelectorAll('.hidden-projects');
-//   for (var i = 0; i < hiddenProjects.length; i++) {
-//     hiddenProjects[i].classList.remove('hidden-projects');
-//     // hiddenProjects[i].style.display = 'flex';
-//   }
-// }
-
 function showHiddenProjects() {
   var hiddenProjects = document.querySelectorAll(".hidden-projects");
   var btn = document.querySelector(".btn");
@@ -393,27 +439,37 @@ window.addEventListener("scroll", animateElements);
 
 // >>>>>>>>>>>>>>>>>>>>> profile Count <<<<<<<<<<<<<<<<<<<<<<<
 let count_profileview = 0;
+let targetCount = parseInt(localStorage.getItem("profileCount")) || 0;
 
-function incrementCount() {
-  count_profileview++;
-  document.getElementById("count_profile").textContent = count_profileview;
+function animateCount() {
+  const countElement = document.getElementById("count_profile");
+  const animationDuration = 3000; // Duration of animation in milliseconds
+  const updateInterval = animationDuration / targetCount; // Delay between count updates in milliseconds
 
-  // Store the count in local storage
-  localStorage.setItem("profileCount", count_profileview.toString());
+  let currentCount = 0;
+  const intervalId = setInterval(() => {
+    currentCount++;
+    countElement.textContent = currentCount;
+
+    if (currentCount === targetCount) {
+      clearInterval(intervalId);
+    }
+  }, updateInterval);
 }
 
 window.addEventListener("DOMContentLoaded", () => {
   // Retrieve the count from local storage
   const storedCount = localStorage.getItem("profileCount");
   if (storedCount) {
-    count_profileview = parseInt(storedCount);
+    count_profileview = parseInt(storedCount) + 1; // Increment the count by 1
+    targetCount = count_profileview; // Set the target count
   }
 
   // Update the count on the page
   document.getElementById("count_profile").textContent = count_profileview;
 
-  // Increment the count when the page is loaded
-  incrementCount();
+  // Animate the count from 0 to the target value
+  animateCount();
 });
 
 window.addEventListener("beforeunload", () => {
