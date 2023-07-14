@@ -119,24 +119,121 @@ image.addEventListener("click", () => {
 
 /********************* Skills Section **********************/
 
+// >>>>>>>>>>>>>>>>>>>>> Skills Markup <<<<<<<<<<<<<<<<<<<<<<<
+const skillsData = [
+  {
+    headerIcon: "fa-solid fa-code",
+    headerTitle: "Languages",
+    headerSubtitle: "Programming Languages I know",
+    skills: [
+      { name: "Python", url: "https://www.python.org/" },
+      { name: "Java", url: "https://www.java.com/" },
+      { name: "C/C++", url: "https://en.cppreference.com/" },
+      {
+        name: "HTML/CSS",
+        url: "https://www.w3.org/standards/webdesign/htmlcss.html",
+      },
+      { name: "JavaScript", url: "https://www.javascript.com/" },
+      { name: "SQL", url: "https://www.w3schools.com/sql/" },
+    ],
+  },
+  {
+    headerIcon: "fa-solid fa-wrench",
+    headerTitle: "Tools",
+    headerSubtitle: "Tools I work with",
+    skills: [
+      { name: "VS Code", url: "https://code.visualstudio.com/" },
+      { name: "Android Studio", url: "https://developer.android.com/studio" },
+      { name: "Jupyter Notebooks", url: "https://jupyter.org/" },
+      { name: "Power BI", url: "https://powerbi.microsoft.com/en-us/" },
+      { name: "MATLAB", url: "https://www.mathworks.com/products/matlab.html" },
+      {
+        name: "Canva/Figma",
+        url: "https://www.canva.com/;https://www.figma.com/",
+      },
+      { name: "GitHub", url: "https://github.com/" },
+    ],
+  },
+  {
+    headerIcon: "fa-solid fa-puzzle-piece",
+    headerTitle: "Frameworks",
+    headerSubtitle: "Frameworks I use",
+    skills: [
+      { name: "Android SDK", url: "https://developer.android.com/studio/sdk" },
+      { name: "Flask", url: "https://flask.palletsprojects.com/" },
+    ],
+  },
+  {
+    headerIcon: "fa-solid fa-layer-group",
+    headerTitle: "Libraries",
+    headerSubtitle: "Libraries I am familiar with",
+    skills: [
+      {
+        name: "Tkinter",
+        url: "https://docs.python.org/3/library/tkinter.html",
+      },
+      { name: "NumPy", url: "https://numpy.org/" },
+      { name: "Matplotlib", url: "https://matplotlib.org/" },
+      { name: "Pandas", url: "https://pandas.pydata.org/" },
+      { name: "PIL", url: "https://pillow.readthedocs.io/" },
+      { name: "OpenCV", url: "https://opencv.org/" },
+    ],
+  },
+];
+
+const skillsContainer = document.getElementById("skillsContainer");
+
+skillsData.forEach((skill, index) => {
+  const isOpen = index === 0 ? "skills__open" : "skills__close";
+  const content = `
+    <div class="skills__content ${isOpen} reveal">
+      <div class="skills__header">
+        <i class="${skill.headerIcon} skills__icon"></i>
+        <div>
+          <h1 class="skills__title">${skill.headerTitle}</h1>
+          <span class="skills__subtitle">${skill.headerSubtitle}</span>
+        </div>
+        <i class="fa-sharp fa-solid fa-chevron-down skills__arrow"></i>
+      </div>
+      <div class="skills__list">
+        ${skill.skills
+          .map(
+            (item) => `
+            <div class="skills__titles">
+              <h3 class="skills__name"><a href="${item.url}">${item.name}</a></h3>
+            </div>
+          `
+          )
+          .join("")}
+      </div>
+    </div>
+  `;
+
+  skillsContainer.innerHTML += content;
+});
+
 // >>>>>>>>>>>>>>>>>>>>> Toggle Skills <<<<<<<<<<<<<<<<<<<<<<<
-const skillsContent = document.getElementsByClassName("skills__content"),
-  skillsHeader = document.querySelectorAll(".skills__header");
+const skillsHeader = document.getElementsByClassName("skills__header");
 
 function toggleSkills() {
-  let itemClass = this.parentNode.className;
+  const parentContent = this.parentNode;
+  const isOpen = parentContent.classList.contains("skills__open");
 
-  for (i = 0; i < skillsContent.length; i++) {
-    skillsContent[i].className = "skills__content skills__close";
+  for (let i = 0; i < skillsHeader.length; i++) {
+    const content = skillsHeader[i].parentNode;
+    content.classList.remove("skills__open");
+    content.classList.add("skills__close");
   }
-  if (itemClass === "skills__content skills__close") {
-    this.parentNode.className = "skills__content skills__open";
+
+  if (!isOpen) {
+    parentContent.classList.remove("skills__close");
+    parentContent.classList.add("skills__open");
   }
 }
 
-skillsHeader.forEach((el) => {
-  el.addEventListener("click", toggleSkills);
-});
+for (let i = 0; i < skillsHeader.length; i++) {
+  skillsHeader[i].addEventListener("click", toggleSkills);
+}
 
 // >>>>>>>>>>>>>>>>>>>>> Tab Change (Education & Experience) <<<<<<<<<<<<<<<<<<<<<<<
 var tablinks = document.getElementsByClassName("tab-links");
