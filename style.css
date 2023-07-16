@@ -122,7 +122,7 @@ nav ul li a:hover::after {
 
 .click-me {
   position: absolute;
-  top: 50%;
+  top: 60%;
   left: 50%;
   transform: translate(-50%, -50%);
   display: none;
@@ -164,7 +164,7 @@ nav ul li a:hover::after {
 
 .tab-titles {
   display: flex;
-  margin: 20px 0 40px;
+  margin: 40px 0 40px;
 }
 
 .tab-links {
@@ -378,6 +378,13 @@ nav ul li a:hover::after {
 /*************** Coding Profile Section ****************/
 .coding-profile__container {
   padding: 10px;
+  margin-top: -20px;
+}
+
+.coding-profile__container h3 {
+  font-size: 1.125rem;
+  margin-bottom: 10px;
+  /* color: #ff004f; */
 }
 
 .coding-profile__content {
@@ -414,10 +421,57 @@ nav ul li a:hover::after {
   color: #ff004f;
   margin-left: 5px;
 }
+
 .coding-profile__count::after {
   content: "+";
   color: #ff004f;
   font-size: 24px;
+}
+
+/*************** Social Profile Section ****************/
+.social-profile__container {
+  padding: 10px;
+}
+
+.social-profile__container h3 {
+  font-size: 1.125rem;
+  margin-bottom: 10px;
+  /* color: #ff004f; */
+}
+
+.social-profile__content {
+  display: flex;
+  justify-content: flex-start;
+}
+
+.social_profile-icons a {
+  text-decoration: none;
+  font-size: 30px;
+  margin-right: 15px;
+  display: inline-block;
+  color: #ababab;
+  transition: transform 0.5s;
+}
+
+.social_profile-icons a:hover {
+  color: #ff004f;
+  transform: translateY(-5px);
+}
+
+/* *************** Other Portfolios Section *************** */
+.other-portfolio__container {
+  padding: 10px;
+}
+
+.other-portfolio__container h3 {
+  font-size: 1.125rem;
+  margin-bottom: 10px;
+  /* color: #ff004f; */
+}
+
+.other-portfolio__content {
+  display: flex;
+  justify-content: flex-start;
 }
 
 /*==================== Services Section ====================*/
@@ -479,7 +533,7 @@ nav ul li a:hover::after {
 }
 
 .services-list div:hover i {
-  color: white; 
+  color: white;
 }
 
 /*==================== Portfolio Section ====================*/
@@ -764,6 +818,36 @@ nav .fa-solid {
   display: none;
 }
 
+/********************* Media Quries **********************/
+
+@media (max-width: 768px) {
+  .header-text {
+    margin-top: 100%;
+  }
+
+  .header-text .text-2 {
+    font-size: 60px;
+  }
+
+  nav ul li {
+    margin: 10px 10px;
+  }
+
+  .sub-title {
+    font-size: 40px;
+  }
+
+  .services-list div,
+  .portfolio-box,
+  .qualification-box {
+    width: 100%;
+  }
+
+  .contact-form {
+    width: 100%;
+  }
+}
+
 @media (max-width: 740px) {
   .portfolio-filter {
     background-color: #f9f9f9;
@@ -779,14 +863,6 @@ nav .fa-solid {
     width: 80%;
   }
 }
-
-@media (max-width: 550px) {
-  .project-heading h1 {
-    font-size: 1.8rem;
-  }
-}
-
-/********************* Media Quries **********************/
 
 @media only screen and (max-width: 600px) {
   #header {
@@ -877,34 +953,27 @@ nav .fa-solid {
   .contact-form {
     width: 100%;
   }
-}
 
-@media (max-width: 768px) {
-  .header-text {
-    margin-top: 100%;
+  .social-profile__content {
+    justify-content: center;
   }
 
-  .header-text .text-2 {
-    font-size: 60px;
+  .other-portfolio__content {
+    justify-content: center;
   }
 
-  nav ul li {
-    margin: 10px 10px;
+  .coding-profile__container h2 {
+    font-size: 20px;
   }
 
-  .sub-title {
-    font-size: 40px;
+  .social-profile__container h2 {
+    font-size: 20px;
   }
 
-  .services-list div,
-  .portfolio-box,
-  .qualification-box {
-    width: 100%;
+  .other-portfolio__container h2 {
+    font-size: 20px;
   }
 
-  .contact-form {
-    width: 100%;
-  }
 }
 
 @media (max-width: 576px) {
@@ -1020,5 +1089,25 @@ nav .fa-solid {
   .btn.btn2 {
     display: flex;
     justify-content: center;
+  }
+}
+
+@media (max-width: 550px) {
+  .project-heading h1 {
+    font-size: 1.8rem;
+  }
+
+  .tab-titles {
+    display: flex;
+    margin: 20px 0 30px;
+  }
+  
+  .tab-links {
+    margin-right: 20px;
+    font-size: 16px;
+    font-weight: 700;
+    color: white;
+    cursor: pointer;
+    position: relative;
   }
 }

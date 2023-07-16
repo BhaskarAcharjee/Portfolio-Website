@@ -2,8 +2,9 @@
 
 // >>>>>>>>>>>>>>>>>>>>> Typing Animation <<<<<<<<<<<<<<<<<<<<<<<
 const texts = [
-  "Android Developer",
   "Data Analyst",
+  "Android Developer",
+  "Python Developer",
   "Graphic Designer",
   "Youtuber",
 ];
@@ -161,6 +162,10 @@ const skillsData = [
     skills: [
       { name: "Android SDK", url: "https://developer.android.com/studio/sdk" },
       { name: "Flask", url: "https://flask.palletsprojects.com/" },
+      {
+        name: "MySQL Workbench",
+        url: "https://www.mysql.com/products/workbench/",
+      },
     ],
   },
   {
@@ -170,13 +175,19 @@ const skillsData = [
     skills: [
       {
         name: "Tkinter",
-        url: "https://docs.python.org/3/library/tkinter.html",
+        url: "https://docs.python.org/3/library/tkinter.html"
       },
       { name: "NumPy", url: "https://numpy.org/" },
       { name: "Matplotlib", url: "https://matplotlib.org/" },
       { name: "Pandas", url: "https://pandas.pydata.org/" },
       { name: "PIL", url: "https://pillow.readthedocs.io/" },
-      { name: "OpenCV", url: "https://opencv.org/" },
+      { name: "librosa", url: "https://librosa.org/" },
+      // { name: "OpenCV", url: "https://opencv.org/" },
+      {
+        name: "winsound",
+        url: "https://docs.python.org/3/library/winsound.html"
+      },
+      { name: "pyttsx3", url: "https://pypi.org/project/pyttsx3/" },
     ],
   },
 ];
@@ -374,11 +385,11 @@ const projects = [
     category: "app all",
   },
   {
-    title: "Data Analytics Project",
-    imageUrl: "images/b-4.jpg",
-    websiteUrl: "#",
-    description: "Data Analytics Project description goes here...",
-    category: "data",
+    title: "Student Results Analysis",
+    imageUrl: "images/student_results_analysis.png",
+    websiteUrl: "https://github.com/BhaskarAcharjee/Student-Results-Analysis",
+    description: "Analyzing student results to uncover insights",
+    category: "data all",
   },
   {
     title: "Carousel Instagram Post",
@@ -389,11 +400,19 @@ const projects = [
     category: "graphic",
   },
   {
-    title: "NRR Calculator",
-    imageUrl: "images/nrrcalculator.png",
-    websiteUrl: "https://bhaskaracharjee.github.io/NRR-Calculator/",
+    title: "Cricket Calculator",
+    imageUrl: "images/cricketcalculator.png",
+    websiteUrl: "https://bhaskaracharjee.github.io/Cricket-Calculator/",
     description:
-      "Net Run Rate (NRR) in cricket is a statistical method of analysing and compare the performance of a team usually during a multi-team tournament. The Net Run Rate plays a critical role to decide which team qualifies for the next round when two or more teams end up with the same number of points.",
+      "Cricket Calculator is a web application that allows you to calculate various metrics related to cricket matches. It includes two calculators: Net Run Rate (NRR) Calculator and Duckworth Lewis (DLS) Target Calculator.",
+    category: "webdev all",
+  },
+  {
+    title: "Personal Portfolio",
+    imageUrl: "images/My_Personal_Portfolio.png",
+    websiteUrl: "https://bhaskaracharjee.github.io/Portfolio-Website/",
+    description:
+      "This website showcases my skills, projects, and experiences, providing visitors with an insight into my professional journey. Feel free to explore and get to know more about me and my work.",
     category: "webdev all",
   },
   {
@@ -401,7 +420,7 @@ const projects = [
     imageUrl: "images/Museum Poster.png",
     websiteUrl:
       "https://www.behance.net/gallery/174268297/Poster-Design-for-College-Museum/modules/984020541",
-    description: "Poster Design for College Museum description goes here...",
+    description: "Poster Design for College Museumn",
     category: "graphic",
   },
   // Add more project here
