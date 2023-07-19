@@ -166,6 +166,8 @@ const skillsData = [
         name: "MySQL Workbench",
         url: "https://www.mysql.com/products/workbench/",
       },
+      { name: "Node.js", url: "https://nodejs.org/" },
+      { name: "Bootstrap", url: "https://getbootstrap.com/" },
     ],
   },
   {
@@ -175,7 +177,7 @@ const skillsData = [
     skills: [
       {
         name: "Tkinter",
-        url: "https://docs.python.org/3/library/tkinter.html"
+        url: "https://docs.python.org/3/library/tkinter.html",
       },
       { name: "NumPy", url: "https://numpy.org/" },
       { name: "Matplotlib", url: "https://matplotlib.org/" },
@@ -185,7 +187,7 @@ const skillsData = [
       // { name: "OpenCV", url: "https://opencv.org/" },
       {
         name: "winsound",
-        url: "https://docs.python.org/3/library/winsound.html"
+        url: "https://docs.python.org/3/library/winsound.html",
       },
       { name: "pyttsx3", url: "https://pypi.org/project/pyttsx3/" },
     ],
@@ -395,7 +397,7 @@ const projects = [
     title: "Carousel Instagram Post",
     imageUrl: "images/studymonkinstaad.png",
     websiteUrl:
-      "https://www.behance.net/gallery/174824905/Carousel-Instagram-Post-for-StudyMonk/modules/987244739",
+      "https://www.behance.net/gallery/174824905/Carousel-Instagram-Post-for-StudyMonk",
     description: "Carousel Instagram Post for StudyMonk",
     category: "graphic",
   },
