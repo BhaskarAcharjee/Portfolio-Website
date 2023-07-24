@@ -12,8 +12,8 @@
 </head>
 
 <body>
-  <!-- ====================== Home Section ====================== -->
-  <div id="header" class="header-section">
+  <!-- ====================== Header Section ====================== -->
+  <div id="header" class="section header-section active-section">
     <div class="container">
       <nav>
         <img src="images/logo.png" class="logo" />
@@ -41,14 +41,14 @@
       <div class="mouse"></div>
     </div>
   </div>
-  
+
   <!-- >>>>>>>>>>>>>>>>>>>>> Scroll-to-Top Button <<<<<<<<<<<<<<<<<<<<<<< -->
   <div class="scroll-to-top-btn hidden" onclick="scrollToTop()">
     <i class="fa-solid fa-arrow-up"></i>
   </div>
 
   <!-- ====================== About Section ====================== -->
-  <div id="about">
+  <div id="about" class="section about-section">
     <div class="container">
       <div class="row">
         <div class="about-col-1 image-container">
@@ -310,7 +310,7 @@
   </div>
 
   <!-- ====================== Services Section ====================== -->
-  <div id="services">
+  <div id="services" class="section services-section">
     <div class="container">
       <h1 class="sub-title">My <span>Services</span></h1>
       <div class="services-list">
@@ -365,7 +365,7 @@
   </div>
 
   <!-- ====================== Portfolio Section ====================== -->
-  <div id="portfolio">
+  <div id="portfolio" class="section portfolio-section">
     <h1 class="sub-title">My <span>Projects</span></h1>
     <div class="project-heading">
       <ul class="project-filter">
@@ -402,7 +402,7 @@
   </div>
 
   <!-- ====================== Certificates and Achievements Section ====================== -->
-  <div id="certificates">
+  <div id="certificates" class="section certificates-section">
     <div class="container">
       <h1 class="sub-title certificate-headline">Certificates and <span>Achievements</span></h1>
       <div class="certificate-container">
@@ -418,22 +418,37 @@
   </div>
 
   <!-- ====================== Contact Section ====================== -->
-  <div id="contact">
+  <div id="contact" class="section contact-section">
     <div class="container">
       <div class="row">
-        <!--******************* Social Media Info *******************-->
+        <!--******************* Profile Card Info *******************-->
         <div class="contact-left">
           <h1 class="sub-title"><span>Contact</span> Me</h1>
-          <p>
-            <i class="fa-solid fa-envelope"></i>bhaskaracharjee.world@gmail.com
-          </p>
-          <p><i class="fa-solid fa-phone"></i>(+91) 6290594650</p>
-          <div class="social-icons">
-            <a href="https://www.linkedin.com/in/bhaskar-acharjee/"><i class="fa-brands fa-linkedin"></i></a>
-            <a href="https://twitter.com/_bha_s_kar_"><i class="fa-brands fa-twitter"></i></a>
-            <a href="https://github.com/BhaskarAcharjee"><i class="fa-brands fa-github"></i></a>
-            <a href="https://youtube.com/@CorvasBhaskar"><i class="fa-brands fa-youtube"></i></a>
+
+          <!-- Modern Profile Card -->
+          <div class="profile-card">
+            <div class="profile-avatar">
+              <img src="images/Bhaskar_Profile_Photo.jpeg" alt="Profile Picture" />
+            </div>
+            <div class="profile-content">
+              <div class="profile-info">
+                <h2 class="profile-name">Bhaskar Acharjee</h2>
+                <p class="profile-description">Data Analyst | Python-Web Dev</p>
+              </div>
+              <div class="profile-contact">
+                <p><i class="fa-solid fa-envelope"></i>bhaskaracharjee.world@gmail.com</p>
+                <p><i class="fa-solid fa-phone"></i>(+91) 6290594650</p>
+                <p><i class="fa-solid fa-location-dot"></i>Kolkata, West Bengal, India</p>
+              </div>
+              <div class="social-icons profile-social-links">
+                <a href="https://www.linkedin.com/in/bhaskar-acharjee/"><i class="fa-brands fa-linkedin"></i></a>
+                <a href="https://twitter.com/_bha_s_kar_"><i class="fa-brands fa-twitter"></i></a>
+                <a href="https://github.com/BhaskarAcharjee"><i class="fa-brands fa-github"></i></a>
+                <a href="https://youtube.com/@CorvasBhaskar"><i class="fa-brands fa-youtube"></i></a>
+              </div>
+            </div>
           </div>
+
           <a href="https://drive.google.com/file/d/14vMN5OUiuzYxO5Q8-_w7-JboW2qB2ZqF/view?usp=drive_link"
             class="btn btn2">Download CV</a>
         </div>
@@ -447,6 +462,7 @@
           </form>
           <span id="msg"></span>
         </div>
+
       </div>
     </div>
     <!-- >>>>>>>>>>>>>>>>>>>>> Copyright Section <<<<<<<<<<<<<<<<<<<<<<< -->
@@ -457,10 +473,9 @@
         <i class="fa-solid fa-signature"></i>
       </p>
       <div class="profile-count">
-        <p>
-          Profile visits :
-          <span id="count_profile">0</span>
-        </p>
+        <!-- <p> <a href="https://count.getloli.com/"><img width="10%"
+          src="https://count.getloli.com/get/@:bhaskaracharjee"></a></p> -->
+        <p> Profile visits : <span id="count_profile">0</span> </p>
       </div>
     </div>
   </div>
