@@ -22,6 +22,7 @@
           <li><a href="#about">About</a></li>
           <li><a href="#services">Services</a></li>
           <li><a href="#portfolio">Portfolio</a></li>
+          <li><a href="#certificates">Achievements</a></li>
           <li><a href="#contact">Contact</a></li>
           <i class="fa-solid fa-xmark" onclick="closemenu()"></i>
         </ul>
@@ -101,50 +102,50 @@
             </div>
 
             <!----------------------- Experience 2 ----------------------->
-            <!-- <div class="qualification__data reveal">
-                <div></div>
-
-                <div>
-                  <span class="qualification__rounder"></span>
-                  <span class="qualification__line"></span>
-                </div>
-
-                <div>
-                  <h3 class="qualification__title">Lorem ipsum</h3>
-                  <span class="qualification__subtitle">Lorem ipsum</span>
-                  <div class="qualification__calendar">
-                    <i class="uil uil-calendar-alt"></i>
-                    20xx - 20xx
-                  </div>
-                </div>
-              </div> -->
-
-            <!----------------------- Experience 3 ----------------------->
-            <!-- <div class="qualification__data reveal">
-                <div>
-                  <h3 class="qualification__title">
-                    Lorem ipsum
-                  </h3>
-                  <span class="qualification__subtitle">Lorem ipsum</span>
-                  <div class="qualification__calendar">
-                    <i class="uil uil-calendar-alt"></i>
-                    20xx - 20xx
-                  </div>
-                </div>
-
-                <div>
-                  <span class="qualification__rounder"></span>
-                  <span class="qualification__line"></span>
-                </div>
-              </div> -->
-
-            <!----------------------- Experience 2 ----------------------->
             <div class="qualification__data reveal">
               <div></div>
 
               <div>
                 <span class="qualification__rounder"></span>
+                <span class="qualification__line"></span>
+              </div>
+
+              <div>
+                <h3 class="qualification__title">Web Development Intern</h3>
+                <span class="qualification__subtitle">InternPe</span>
+                <div class="qualification__calendar">
+                  <i class="uil uil-calendar-alt"></i>
+                  July 2023 - August 2023
+                </div>
+              </div>
+            </div>
+
+            <!----------------------- Experience 3 ----------------------->
+            <div class="qualification__data reveal">
+              <div>
+                <h3 class="qualification__title">
+                  Cashier
+                </h3>
+                <span class="qualification__subtitle">Center for Innovations Club, JGEC</span>
+                <div class="qualification__calendar">
+                  <i class="uil uil-calendar-alt"></i>
+                  December 2022 - Present
+                </div>
+              </div>
+
+              <div>
+                <span class="qualification__rounder"></span>
                 <!-- <span class="qualification__line"></span> -->
+              </div>
+            </div>
+
+            <!----------------------- Experience 4 ----------------------->
+            <!-- <div class="qualification__data reveal">
+              <div></div>
+
+              <div>
+                <span class="qualification__rounder"></span>
+                <span class="qualification__line"></span>
               </div>
 
               <div>
@@ -155,7 +156,8 @@
                   December 2022 - Present
                 </div>
               </div>
-            </div>
+            </div> -->
+
           </div>
 
           <!-- >>>>>>>>>>>>>>>>>>>>> Education Section <<<<<<<<<<<<<<<<<<<<<<< -->
@@ -379,14 +381,31 @@
       </ul>
     </div>
 
-    <div class="portfolio-container active-filter-selected" id="all">
-      <!-- <a class="btn btn3 see-more-button">See More</a> -->
-    </div>
+    <div class="portfolio-container active-filter-selected" id="all"></div>
     <div class="portfolio-container" id="app"></div>
     <div class="portfolio-container" id="python"></div>
     <div class="portfolio-container" id="webdev"></div>
     <div class="portfolio-container" id="data"></div>
     <div class="portfolio-container" id="graphic"></div>
+    <div class="see-more-less">
+      <!-- dynamic see more/see less button add here -->
+    </div>
+  </div>
+
+  <!-- ====================== Certificates and Achievements Section ====================== -->
+  <div id="certificates">
+    <div class="container">
+      <h1 class="sub-title certificate-headline">Certificates and <span>Achievements</span></h1>
+      <div class="certificate-container">
+        <img src="images/deloitte_certificate.png" alt="Certificate 1" id="certificateImage" />
+        <h3>Deloitte Virtual Experience</h3>
+        <p>Certificate of Completion of Deloitte Virtual Experience Program</p>
+        <div class="certificate-controls">
+          <img src="images/prev.png" alt="Previous" onclick="showPreviousCertificate()" />
+          <img src="images/next.png" alt="Next" onclick="showNextCertificate()" />
+        </div>
+      </div>
+    </div>
   </div>
 
   <!-- ====================== Contact Section ====================== -->

@@ -3,8 +3,9 @@
 // >>>>>>>>>>>>>>>>>>>>> Typing Animation <<<<<<<<<<<<<<<<<<<<<<<
 const texts = [
   "Data Analyst",
-  "Android Developer",
   "Python Developer",
+  "Web Developer",
+  "Android Developer",
   "Graphic Designer",
   "Youtuber",
 ];
@@ -444,17 +445,98 @@ function generateProjectMarkup(project) {
 function initializePortfolio() {
   const portfolioContainers = document.querySelectorAll(".portfolio-container");
 
-  projects.slice(0, numProjectsToShow).forEach((project) => {
-    const projectMarkup = generateProjectMarkup(project);
-    const categories = project.category.split(" ");
+  // Initialize projects for other categories
+  const categories = ["app", "python", "webdev", "data", "graphic", "all"];
 
-    categories.forEach((category) => {
-      const container = document.getElementById(category);
-      if (container) {
-        container.innerHTML += projectMarkup;
+  categories.forEach((category) => {
+    const categoryProjects = projects.filter((project) =>
+      project.category.includes(category)
+    );
+
+    const categoryContainer = document.getElementById(category);
+    if (categoryContainer) {
+      categoryContainer.innerHTML = "";
+
+      categoryProjects.slice(0, numProjectsToShow).forEach((project) => {
+        const projectMarkup = generateProjectMarkup(project);
+        categoryContainer.innerHTML += projectMarkup;
+      });
+
+      // Add "See More" button if there are more projects to show
+      if (categoryProjects.length > numProjectsToShow) {
+        const seeMoreButton = document.createElement("a");
+        seeMoreButton.classList.add("btn", "btn3", "see-more-button");
+        seeMoreButton.textContent = "See More";
+        seeMoreButton.onclick = () => showAllProjects(category);
+        const seeMoreLessContainer = document.querySelector(".see-more-less");
+        if (seeMoreLessContainer) {
+          seeMoreLessContainer.innerHTML = ""; // Clear any previous content
+          seeMoreLessContainer.appendChild(seeMoreButton);
+        }
       }
-    });
+    }
   });
+}
+
+// >>>>>>>>>>>>>>>>>>>>> Show-hide More Projects (*issue*) <<<<<<<<<<<<<<<<<<<<<<<
+
+// Add a global variable to keep track of the number of projects to show initially
+let numProjectsToShow = 6;
+
+function showAllProjects(category) {
+  const categoryContainer = document.getElementById(category);
+  if (!categoryContainer) return;
+
+  categoryContainer.innerHTML = "";
+
+  const categoryProjects = projects.filter((project) =>
+    project.category.includes(category)
+  );
+
+  categoryProjects.forEach((project) => {
+    const projectMarkup = generateProjectMarkup(project);
+    categoryContainer.innerHTML += projectMarkup;
+  });
+
+  const seeLessButton = document.createElement("a");
+  seeLessButton.classList.add("btn", "btn3", "see-more-button");
+  seeLessButton.textContent = "See Less";
+  seeLessButton.onclick = () => showLessProjects(category);
+  categoryContainer.appendChild(seeLessButton);
+
+  const seeMoreLessContainer = document.querySelector(".see-more-less");
+  if (seeMoreLessContainer) {
+    seeMoreLessContainer.innerHTML = ""; // Clear any previous content
+    seeMoreLessContainer.appendChild(seeLessButton);
+  }
+}
+
+function showLessProjects(category) {
+  const categoryContainer = document.getElementById(category);
+  if (!categoryContainer) return;
+
+  categoryContainer.innerHTML = "";
+
+  const categoryProjects = projects.filter((project) =>
+    project.category.includes(category)
+  );
+
+  categoryProjects.slice(0, numProjectsToShow).forEach((project) => {
+    const projectMarkup = generateProjectMarkup(project);
+    categoryContainer.innerHTML += projectMarkup;
+  });
+
+  const seeMoreButton = document.createElement("a");
+  seeMoreButton.classList.add("btn", "btn3", "see-more-button");
+  seeMoreButton.textContent = "See More";
+  seeMoreButton.onclick = () => showAllProjects(category);
+  categoryContainer.appendChild(seeMoreButton);
+
+  const seeMoreLessContainer = document.querySelector(".see-more-less");
+  if (seeMoreLessContainer) {
+    seeMoreLessContainer.innerHTML = ""; // Clear any previous content
+    seeMoreLessContainer.appendChild(seeMoreButton);
+  }
 }
 
 // initialize Portfolio from Project Markup
@@ -483,24 +565,55 @@ function openFilter(category) {
   });
 }
 
-// >>>>>>>>>>>>>>>>>>>>> Show hidden Projects <<<<<<<<<<<<<<<<<<<<<<<
-function showHiddenProjects() {
-  var hiddenProjects = document.querySelectorAll(".hidden-projects");
-  var btn = document.querySelector(".btn");
+/*==================== Certificates and Achievements Section ====================*/
 
-  if (hiddenProjects.length > 0) {
-    for (var i = 0; i < hiddenProjects.length; i++) {
-      hiddenProjects[i].classList.remove("hidden-projects");
-    }
-    btn.textContent = "See Less";
-  } else {
-    var allProjects = document.querySelectorAll(".portfolio-box");
-    for (var i = 6; i < allProjects.length; i++) {
-      allProjects[i].classList.add("hidden-projects");
-      allProjects[i].style.display = "none";
-    }
-    btn.textContent = "See More";
-  }
+const certificates = [
+  {
+    image: "images/deloitte_certificate.png",
+    title: "Deloitte Virtual Experience",
+    description:
+      "Certificate of Completion of Deloitte Virtual Experience Program",
+  },
+  {
+    image: "images/cloudprogram_certificate.jpeg",
+    title: "30 Days Google Cloud Program",
+    description: "Certificate of Completion of 30 days of Google Cloud Program",
+  },
+  {
+    image: "images/EDUCBA_Certificate.jpg",
+    title: "Android Training",
+    description:
+      "Certificate of Completion of Android Mobile Nougat Apps Training",
+  },
+  {
+    image: "images/Digital India Quiz Participation Certificate.jpg",
+    title: "Digital india Quiz",
+    description: "Certificate of Participation in Digital India Quiz",
+  },
+  // more certificates
+];
+
+let currentCertificateIndex = 0;
+const certificateImage = document.getElementById("certificateImage");
+const certificateTitle = document.querySelector("#certificates h3");
+const certificateDescription = document.querySelector("#certificates p");
+
+function updateCertificateDisplay() {
+  certificateImage.src = certificates[currentCertificateIndex].image;
+  certificateTitle.textContent = certificates[currentCertificateIndex].title;
+  certificateDescription.textContent =
+    certificates[currentCertificateIndex].description;
+}
+
+function showNextCertificate() {
+  currentCertificateIndex = (currentCertificateIndex + 1) % certificates.length;
+  updateCertificateDisplay();
+}
+
+function showPreviousCertificate() {
+  currentCertificateIndex =
+    (currentCertificateIndex - 1 + certificates.length) % certificates.length;
+  updateCertificateDisplay();
 }
 
 /*==================== Contact Section ====================*/

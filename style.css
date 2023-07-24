@@ -477,6 +477,7 @@ nav ul li a:hover::after {
 /*==================== Services Section ====================*/
 #services {
   padding: 30px 0;
+  margin-bottom: 180px;
 }
 
 .services-list {
@@ -670,8 +671,68 @@ nav ul li a:hover::after {
   opacity: 1;
 }
 
-.hidden-projects {
-  display: none;
+/* ==================== Certificates Section ==================== */
+#certificates {
+  padding: 40px 0;
+  text-align: center;
+  margin-bottom: 180px;
+}
+
+.certificate-headline {
+  margin-bottom: 20px;
+}
+
+.certificate-container {
+  position: relative;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.certificate-container img {
+  width: 100%;
+  border-radius: 8px;
+  margin-bottom: 10px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+  transition: transform 0.2s ease-in-out;
+}
+
+.certificate-container:hover img {
+  transform: scale(1.05);
+}
+
+.certificate-controls {
+  display: flex;
+  justify-content: space-between;
+  position: absolute;
+  top: 50%;
+  left: -70px;
+  right: -70px;
+  transform: translateY(-50%);
+  transition: opacity 0.2s ease-in-out;
+  opacity: 0.7;
+}
+
+.certificate-container:hover .certificate-controls {
+  opacity: 1;
+}
+
+.certificate-controls img {
+  cursor: pointer;
+  width: 40px;
+  margin: 0 10px;
+  transition: transform 0.2s ease-in-out;
+}
+
+.certificate-controls img:hover {
+  transform: scale(1.1);
+}
+
+.certificate-controls .prev {
+  order: 1;
+}
+
+.certificate-controls .next {
+  order: 3;
 }
 
 /*==================== Contact Section ====================*/
@@ -846,6 +907,29 @@ nav .fa-solid {
   .contact-form {
     width: 100%;
   }
+
+  .certificate-controls {
+    left: 0;
+    right: 0;
+    transform: translateY(0);
+    top: 0;
+    margin-top: 30%;
+    bottom: unset;
+    padding: 5px 20px;
+    border-radius: 0 0 8px 8px;
+    display: flex;
+    justify-content: space-between;
+    opacity: 1;
+  }
+
+  .certificate-controls img {
+    margin: 0;
+    width: 30px;
+  }
+
+  .certificate-container img {
+    border-radius: 8px 8px 0 0;
+  }
 }
 
 @media (max-width: 740px) {
@@ -973,7 +1057,6 @@ nav .fa-solid {
   .other-portfolio__container h2 {
     font-size: 20px;
   }
-
 }
 
 @media (max-width: 576px) {
@@ -1090,6 +1173,10 @@ nav .fa-solid {
     display: flex;
     justify-content: center;
   }
+
+  .certificate-headline {
+    font-size: 20px;
+  }
 }
 
 @media (max-width: 550px) {
@@ -1101,7 +1188,7 @@ nav .fa-solid {
     display: flex;
     margin: 20px 0 30px;
   }
-  
+
   .tab-links {
     margin-right: 20px;
     font-size: 16px;
