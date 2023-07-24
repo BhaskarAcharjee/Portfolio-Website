@@ -1,3 +1,30 @@
+// ====================== Scroll-to-Top Function ======================
+
+// JavaScript to hide scroll indicator when the user scrolls
+document.addEventListener("scroll", function () {
+  const scrollIndicator = document.querySelector(".scroll-indicator");
+  scrollIndicator.style.display = "none";
+});
+
+function scrollToTop() {
+  window.scrollTo({ top: 0, behavior: "smooth" });
+}
+
+// >>>>>>>>>>>>>>>>>>>>> Show/Hide Scroll-to-Top Button <<<<<<<<<<<<<<<<<<<<<<<
+const headerSection = document.querySelector(".header-section");
+const scrollToTopBtn = document.querySelector(".scroll-to-top-btn");
+
+function handleScroll() {
+  if (window.scrollY >= headerSection.offsetHeight) {
+    scrollToTopBtn.classList.remove("hidden");
+  } else {
+    scrollToTopBtn.classList.add("hidden");
+  }
+}
+
+// Attach the scroll event listener to the window
+window.addEventListener("scroll", handleScroll);
+
 /*==================== About Section ====================*/
 
 // >>>>>>>>>>>>>>>>>>>>> Typing Animation <<<<<<<<<<<<<<<<<<<<<<<
