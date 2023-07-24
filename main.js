@@ -444,7 +444,7 @@ function generateProjectMarkup(project) {
 function initializePortfolio() {
   const portfolioContainers = document.querySelectorAll(".portfolio-container");
 
-  projects.forEach((project) => {
+  projects.slice(0, numProjectsToShow).forEach((project) => {
     const projectMarkup = generateProjectMarkup(project);
     const categories = project.category.split(" ");
 
