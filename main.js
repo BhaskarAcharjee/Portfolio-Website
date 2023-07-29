@@ -345,7 +345,7 @@ const projects = [
   {
     title: "Melody Morph",
     imageUrl: "images/melodymorph.png",
-    websiteUrl: "https://github.com/BhaskarAcharjee/MelodyMorph",
+    websiteUrl: "https://melodymorph-production.up.railway.app/",
     description:
       "MelodyMorph is a Python Flask web application for audio analysis and melody transformation. It provides a user-friendly interface to analyze audio files, extract melodic information, and apply various transformations like transposition, rhythm modification, and harmonic generation. With MelodyMorph, users can explore and manipulate visual melodies effortlessly.",
     category: "python webdev all",
