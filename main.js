@@ -155,15 +155,46 @@ const skillsData = [
     headerTitle: "Languages",
     headerSubtitle: "Programming Languages I know",
     skills: [
-      { name: "Python", url: "https://www.python.org/" },
-      { name: "Java", url: "https://www.java.com/" },
-      { name: "C/C++", url: "https://en.cppreference.com/" },
       {
-        name: "HTML/CSS",
-        url: "https://www.w3.org/standards/webdesign/htmlcss.html",
+        name: "Python",
+        url: "https://www.python.org/",
+        icon: "images/icons_python.svg",
       },
-      { name: "JavaScript", url: "https://www.javascript.com/" },
-      { name: "SQL", url: "https://www.w3schools.com/sql/" },
+      {
+        name: "Java",
+        url: "https://www.java.com/",
+        icon: "images/icons_java.svg",
+      },
+      {
+        name: "C",
+        url: "https://en.cppreference.com/",
+        icon: "images/icons_c.svg",
+      },
+      {
+        name: "C++",
+        url: "https://en.cppreference.com/",
+        icon: "images/icons_cpp.svg",
+      },
+      {
+        name: "HTML",
+        url: "https://www.w3.org/standards/webdesign/htmlcss.html",
+        icon: "images/icons_html.svg",
+      },
+      {
+        name: "CSS",
+        url: "https://www.w3.org/standards/webdesign/htmlcss.html",
+        icon: "images/icons_css.svg",
+      },
+      {
+        name: "JavaScript",
+        url: "https://www.javascript.com/",
+        icon: "images/icons_javascript1.svg",
+      },
+      {
+        name: "SQL",
+        url: "https://www.w3schools.com/sql/",
+        icon: "images/icons_sql.svg",
+      },
     ],
   },
   {
@@ -171,16 +202,46 @@ const skillsData = [
     headerTitle: "Tools",
     headerSubtitle: "Tools I work with",
     skills: [
-      { name: "VS Code", url: "https://code.visualstudio.com/" },
-      { name: "Android Studio", url: "https://developer.android.com/studio" },
-      { name: "Jupyter Notebooks", url: "https://jupyter.org/" },
-      { name: "Power BI", url: "https://powerbi.microsoft.com/en-us/" },
-      { name: "MATLAB", url: "https://www.mathworks.com/products/matlab.html" },
       {
-        name: "Canva/Figma",
-        url: "https://www.canva.com/;https://www.figma.com/",
+        name: "VS Code",
+        url: "https://code.visualstudio.com/",
+        icon: "images/icons_vscode.svg",
       },
-      { name: "GitHub", url: "https://github.com/" },
+      {
+        name: "Android Studio",
+        url: "https://developer.android.com/studio",
+        icon: "images/icons_androidstudio.svg",
+      },
+      {
+        name: "Jupyter Notebooks",
+        url: "https://jupyter.org/",
+        icon: "images/icons_jupyter.svg",
+      },
+      {
+        name: "Power BI",
+        url: "https://powerbi.microsoft.com/en-us/",
+        icon: "images/icons_microsoft-power-bi.svg",
+      },
+      {
+        name: "MATLAB",
+        url: "https://www.mathworks.com/products/matlab.html",
+        icon: "images/icons_matlab.svg",
+      },
+      {
+        name: "Canva",
+        url: "https://www.canva.com/;https://www.canva.com/",
+        icon: "images/icons_canva.svg",
+      },
+      {
+        name: "Figma",
+        url: "https://www.canva.com/;https://www.figma.com/",
+        icon: "images/icons_figma.svg",
+      },
+      {
+        name: "GitHub",
+        url: "https://github.com/",
+        icon: "images/icons_github.svg",
+      },
     ],
   },
   {
@@ -188,14 +249,31 @@ const skillsData = [
     headerTitle: "Frameworks",
     headerSubtitle: "Frameworks I use",
     skills: [
-      { name: "Android SDK", url: "https://developer.android.com/studio/sdk" },
-      { name: "Flask", url: "https://flask.palletsprojects.com/" },
+      {
+        name: "Android SDK",
+        url: "https://developer.android.com/studio/sdk",
+        icon: "images/icons_android.svg",
+      },
+      {
+        name: "Flask",
+        url: "https://flask.palletsprojects.com/",
+        icon: "images/icons_flask.svg",
+      },
       {
         name: "MySQL Workbench",
         url: "https://www.mysql.com/products/workbench/",
+        icon: "images/icons_mysql-wordmark.svg",
       },
-      { name: "Node.js", url: "https://nodejs.org/" },
-      { name: "Bootstrap", url: "https://getbootstrap.com/" },
+      {
+        name: "Node.js",
+        url: "https://nodejs.org/",
+        icon: "images/icons_node.svg",
+      },
+      {
+        name: "Bootstrap",
+        url: "https://getbootstrap.com/",
+        icon: "images/icons_bootstrap.svg",
+      },
     ],
   },
   {
@@ -238,14 +316,17 @@ skillsData.forEach((skill, index) => {
       </div>
       <div class="skills__list">
         ${skill.skills
-          .map(
-            (item) => `
-            <div class="skills__titles">
-              <h3 class="skills__name"><a href="${item.url}">${item.name}</a></h3>
+      .map(
+        (item) => `
+            <div class="skills__titles ${item.icon ? "" : "skills__titles_extended"}">
+              ${item.icon
+            ? `<a href="${item.url}" target="_blank"><img src="${item.icon}" alt="${item.name} Icon"></a>`
+            : `<h3 class="skills__name"><a href="${item.url}">${item.name}</a></h3>`
+          }
             </div>
           `
-          )
-          .join("")}
+      )
+      .join("")}
       </div>
     </div>
   `;
@@ -299,8 +380,8 @@ const leetcodeCountElement = document.getElementById("leetcode-count");
 const gfgCountElement = document.getElementById("gfg-count");
 
 // Set the target numbers
-const leetcodeTargetCount = 375;
-const gfgTargetCount = 175;
+const leetcodeTargetCount = 400;
+const gfgTargetCount = 200;
 
 // Function to animate the count
 function animateProblemsCount(problemelement, problemtarget) {
