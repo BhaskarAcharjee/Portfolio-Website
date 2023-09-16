@@ -85,6 +85,59 @@ function backspace() {
 
 type(); // Start the typing animation
 
+// >>>>>>>>>>>>>>>>>>>>> Shuffle Animation <<<<<<<<<<<<<<<<<<<<<<<
+const random_char = () => {
+  const possible =
+    // "!\"#$%&'()*+,-./:;<=>?@[\\]^_`{|}~" + "0123456789" +
+    "ABCDEFGHIJKLMNOPQRSTUVWXYZ" + "abcdefghijklmnopqrstuvwxyz";
+  return possible.charAt(Math.floor(Math.random() * possible.length));
+};
+
+const mask = (chars, progress) => {
+  const masked = [];
+
+  for (let i = 0; i < chars.length; i++) {
+    const position = (i + 1) / chars.length;
+    if (position > progress) {
+      masked.push(random_char());
+    } else {
+      masked.push(chars[i]);
+    }
+  }
+
+  return masked.join("");
+};
+
+const shuffle = (el) => {
+  const chars = el.textContent.split("");
+
+  const params = {
+    progress: 0,
+  };
+
+  const a = anime({
+    targets: params,
+    progress: 1,
+    delay: 200,
+    duration: 800,
+    easing: "easeInQuad",
+    update: () => {
+      el.textContent = mask(chars, params.progress);
+    },
+    complete: () => {
+      el.classList.add("completed");
+    },
+  });
+
+  el.onclick = () => {
+    el.classList.remove("completed");
+    a.restart();
+  };
+};
+
+const text2 = document.querySelector(".text-2");
+shuffle(text2);
+
 // >>>>>>>>>>>>>>>>>>>>> About Me Animation <<<<<<<<<<<<<<<<<<<<<<<
 const typingText = `I am <Bhaskar Acharjee>, an aspiring <Electronics and Communication engineer> currently pursuing my <Bachelor of Technology> at <Jalpaiguri Government Engineering College>. With a strong passion for technology and design, I constantly strive to explore and enhance my skills in various domains.
     My journey in the field of technology has equipped me with a wide range of technical skills. I am proficient in languages such as <Python>, <Java>, <C/C++>, <HTML/CSS>, and <SQL>. I have hands-on experience with developer tools like <VS Code>, <Android Studio>, <Jupyter Notebooks>, and <MATLAB>. Additionally, I have expertise in <Android app development>, <data analytics> using tools like <Power BI> and <Advanced Excel>, and <graphic design> using Canva, Figma, and Adobe software.
@@ -213,6 +266,11 @@ const skillsData = [
         icon: "images/icons_androidstudio.svg",
       },
       {
+        name: "GitHub",
+        url: "https://github.com/",
+        icon: "images/icons_github.svg",
+      },
+      {
         name: "Jupyter Notebooks",
         url: "https://jupyter.org/",
         icon: "images/icons_jupyter.svg",
@@ -237,11 +295,6 @@ const skillsData = [
         url: "https://www.canva.com/;https://www.figma.com/",
         icon: "images/icons_figma.svg",
       },
-      {
-        name: "GitHub",
-        url: "https://github.com/",
-        icon: "images/icons_github.svg",
-      },
     ],
   },
   {
@@ -260,9 +313,9 @@ const skillsData = [
         icon: "images/icons_flask.svg",
       },
       {
-        name: "MySQL Workbench",
-        url: "https://www.mysql.com/products/workbench/",
-        icon: "images/icons_mysql-wordmark.svg",
+        name: "React",
+        url: "https://react.dev/",
+        icon: "images/icons_react.svg",
       },
       {
         name: "Node.js",
@@ -273,6 +326,11 @@ const skillsData = [
         name: "Bootstrap",
         url: "https://getbootstrap.com/",
         icon: "images/icons_bootstrap.svg",
+      },
+      {
+        name: "MySQL Workbench",
+        url: "https://www.mysql.com/products/workbench/",
+        icon: "images/icons_mysql-wordmark.svg",
       },
     ],
   },
@@ -316,17 +374,20 @@ skillsData.forEach((skill, index) => {
       </div>
       <div class="skills__list">
         ${skill.skills
-      .map(
-        (item) => `
-            <div class="skills__titles ${item.icon ? "" : "skills__titles_extended"}">
-              ${item.icon
-            ? `<a href="${item.url}" target="_blank"><img src="${item.icon}" alt="${item.name} Icon"></a>`
-            : `<h3 class="skills__name"><a href="${item.url}">${item.name}</a></h3>`
-          }
+          .map(
+            (item) => `
+            <div class="skills__titles ${
+              item.icon ? "" : "skills__titles_extended"
+            }">
+              ${
+                item.icon
+                  ? `<a href="${item.url}" target="_blank"><img src="${item.icon}" alt="${item.name} Icon"></a>`
+                  : `<h3 class="skills__name"><a href="${item.url}">${item.name}</a></h3>`
+              }
             </div>
           `
-      )
-      .join("")}
+          )
+          .join("")}
       </div>
     </div>
   `;
@@ -446,6 +507,14 @@ const projects = [
     description:
       "The notes app is a versatile tool for organizing and managing digital notes. With features like categorization, search functionality, and cloud synchronization, it provides convenience and accessibility. Whether it's jotting down ideas, creating to-do lists, or capturing important information, the notes app is a handy companion for staying organized and productive.",
     category: "app all",
+  },
+  {
+    title: "Finance Tracker",
+    imageUrl: "images/financetracker.png",
+    websiteUrl: "https://net-worth-tracker.netlify.app/",
+    description:
+      "Net Worth Tracker is a user-friendly web application designed to help individuals monitor and manage their financial net worth effectively. By allowing users to record their income and expenses, this application enables them to gain insights into their financial health and make informed decisions. Whether you are focused on personal finance management or seeking an overview of your financial progress, the Net Worth Tracker can be an essential tool in achieving your financial goals.",
+    category: "webdev all",
   },
   {
     title: "Sudoku Solver",
